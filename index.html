@@ -3,11 +3,13 @@
   <head>
     <title>CTcue</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/ctAutocomplete.js"></script>
   </head>
 
-  <body>
+  <body ng-app="ctSite">
     <div id="navigation">
-      <div class="container">          
+      <div class="container">
         <img class="logo" src="img/ctcue-logo.png" alt="CTcue">
 
         <a href="" class="login-app">Login</a>
@@ -31,7 +33,6 @@
 
           <div class="cta-container">
             <a href="" class="button pull-left">Get started</a>
-
             <a href="" class="link">Learn more</a>
           </div>
         </div>
@@ -52,8 +53,33 @@
 
     <section id="autosuggest">
       <div class="container">
-        <div class="half pull-left">
-          <img src="img/suggest-placeholder.png" alt="Autosuggest placeholder">
+        <div class="half pull-left" ng-controller="ctAutocomplete">
+            <div class="form-field">
+                <label ng-show="__selected" class="floating-label-pattern label-default">Search terms</label>
+
+                {{ __selected }}
+
+                <input type='text'
+                  autocomplete='off'
+                  placeholder='Add search terms to the official criterion'
+                  ng-model='__selected'
+                  typing='APIsuggestions(__selected, item.name)' blur-class>
+            </div>
+
+            <div class='full' ng-if='__noResult'>
+                <h4>No results found for {{ __selected }}.</h4>
+            </div>
+
+            <div class="full autocomplete-results" ng-if='__hits.length'>
+              <h4>Results for {{ __selected }} found in {{ __took }}ms</h4>
+
+              <ul class='simple'>
+              <li class='autosuggest-item capitalized boxo'
+              ng-repeat="obj in __hits | limitTo: 7" ng-click='onSelect(obj, "name")'>
+              {{ obj.str }}
+              </li>
+              </ul>
+            </div>
         </div>
 
         <div class="half pull-right vertical-align">
@@ -174,6 +200,6 @@
       </div>
     </section>
 
-    <script type="text/javascript" src="js/retina.min.js"></script>
+    <script src="js/retina.min.js"></script>
   </body>
 </html>
