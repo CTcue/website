@@ -57,9 +57,9 @@
             <div class="form-field">
                 <label ng-show="__selected" class="floating-label-pattern label-default">Search terms</label>
 
-                {{ __selected }}
-
-                <input type='text'
+                <input
+                  id="apiInput"
+                  type='text'
                   autocomplete='off'
                   placeholder='Add search terms to the official criterion'
                   ng-model='__selected'
@@ -71,11 +71,11 @@
             </div>
 
             <div class="full autocomplete-results" ng-if='__hits.length'>
-              <h4>Results for {{ __selected }} found in {{ __took }}ms</h4>
+              <p>Results for {{ __selected }} found in {{ __took }}ms</p>
 
               <ul class='simple'>
               <li class='autosuggest-item capitalized boxo'
-              ng-repeat="obj in __hits | limitTo: 7" ng-click='onSelect(obj, "name")'>
+              ng-repeat="obj in __hits | limitTo: 5" ng-click='onSelect(obj, "name")'>
               {{ obj.str }}
               </li>
               </ul>
@@ -194,7 +194,6 @@
 
         <div class="cta-container">
           <a href="" class="button pull-left">Try now</a>
-
           <a href="" class="button pull-right">Contact us</a>
         </div>
       </div>
