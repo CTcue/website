@@ -4,17 +4,18 @@
     <title>CTcue</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/angular.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/ctAutocomplete.js"></script>
   </head>
 
-  <body ng-app="ctSite">
+  <body>
     <div id="navigation">
       <div class="container">
         <img class="logo" src="img/ctcue-logo.png" alt="CTcue">
 
         <a href="" class="login-app">Login</a>
 
-        <nav>
+        <nav id="nav-bar">
           <a href="#" class="active">CTcue</a>
           <a href="#vision">Vision</a>
           <a href="#team">Team</a>
@@ -51,7 +52,7 @@
       </div>
     </section>
 
-    <section id="autosuggest">
+    <section id="autosuggest" ng-app="ctSite">
       <div class="container">
         <div class="half pull-left" ng-controller="ctAutocomplete">
             <div class="form-field">
@@ -62,7 +63,7 @@
                   placeholder='Search through our knowledge base'
                   ng-model='__selected'
                   typing='APIsuggestions(__selected, item.name)'
-                  ng-class='{ typing: __selected.length > 1 }'>
+                  ng-class='{ typing: __selected.length > 1 || hacking }'>
 
                 <label ng-sho="__selected" for="apiInput" class="label-default">
                   Search through our knowledge base
@@ -204,5 +205,19 @@
     </section>
 
     <script src="js/retina.min.js"></script>
+    <script>
+        // http://stackoverflow.com/a/1586379/951517
+        $.fn.scrollView = function () {
+            return this.each(function () {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top
+                }, 1000);
+            });
+        }
+
+        $("#nav-bar a").click(function() {
+            $($(this).attr('href')).scrollView();
+        });
+    </script>
   </body>
 </html>

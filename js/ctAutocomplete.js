@@ -1,5 +1,13 @@
 var app = angular.module('ctSite', []);
 
+app.controller('nav', function($scope, $location, $anchorScroll) {
+
+  $scope.scrollTo = function(section) {
+      $location.hash(section);
+      $anchorScroll();
+  }
+});
+
 // If you type in an input field or press enter while focused
 // the event fires
 app.directive('typing', function ($timeout, $window) {
@@ -110,33 +118,40 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
     }
   };
 
-  // var inputElem = document.getElementById("apiInput");
-  // var autosuggestElem = document.getElementById("autosuggest");
-  // var offsetY = autosuggestElem.offsetTop - 200;
+  ////////////////////////////
+  // Hacker Typer
+  ////////////////////////////
 
-  // var scrollObject = {};
-  // window.onscroll = getScrollPosition;
+  $scope.hacking = false;
+  var inputElem = document.getElementById("apiInput");
+  var autosuggestElem = document.getElementById("autosuggest");
+  var offsetY = autosuggestElem.offsetTop - 200;
 
-  // var captionLength = 0;
-  // var caption = "Anky spondy";
+  var scrollObject = {};
+  window.onscroll = getScrollPosition;
 
-  // var __type = function() {
-  //     var val = caption.substr(0, captionLength++);
-  //     inputElem.value = val;
+  var captionLength = 0;
+  var caption = "Anky spondy";
 
-  //     Suggest(val);
+  var __type = function() {
+      $scope.hacking = true;
+      var val = caption.substr(0, captionLength++);
+      inputElem.value = val;
+      inputElem.focus();
 
-  //     if (captionLength < caption.length+1) {
-  //         setTimeout(__type, 220);
-  //     }
-  // }
+      Suggest(val);
 
-  // function getScrollPosition() {
-  //     // If you want to check distance
-  //     if (window.pageYOffset > offsetY) {
-  //         __type();
-  //     }
-  // }
+      if (captionLength < caption.length+1) {
+          setTimeout(__type, Math.floor((Math.random() * 120) + 60));
+      }
+  }
+
+  function getScrollPosition() {
+      // If you want to check distance
+      if (!$scope.hacking & window.pageYOffset > offsetY) {
+          __type();
+      }
+  }
 
   /*
   $scope.startSynonymBrowser = function(term) {
