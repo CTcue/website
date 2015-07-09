@@ -15,11 +15,11 @@
         <a href="" class="login-app">Login</a>
 
         <nav>
-          <a href="" class="active">CTcue</a>
-          <a href="">Vision</a>
-          <a href="">Team</a>
-          <a href="">Partners</a>
-          <a href="">Contact</a>
+          <a href="#" class="active">CTcue</a>
+          <a href="#vision">Vision</a>
+          <a href="#team">Team</a>
+          <a href="#partners">Partners</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </div>
@@ -55,35 +55,39 @@
       <div class="container">
         <div class="half pull-left" ng-controller="ctAutocomplete">
             <div class="form-field">
-                <label ng-show="__selected" class="floating-label-pattern label-default">Search terms</label>
-
                 <input
                   id="apiInput"
                   type='text'
                   autocomplete='off'
-                  placeholder='Add search terms to the official criterion'
+                  placeholder='Search through our knowledge base'
                   ng-model='__selected'
-                  typing='APIsuggestions(__selected, item.name)' blur-class>
+                  typing='APIsuggestions(__selected, item.name)'
+                  ng-class='{ typing: __selected.length > 1 }'>
+
+                <label ng-sho="__selected" for="apiInput" class="label-default">
+                  Search through our knowledge base
+                </label>
+
             </div>
 
             <div class='full' ng-if='__noResult'>
-                <h4>No results found for {{ __selected }}.</h4>
+                <h4>No results found for <b>{{ __selected }}</b>.</h4>
             </div>
 
             <div class="full autocomplete-results" ng-if='__hits.length'>
-              <p>Results for {{ __selected }} found in {{ __took }}ms</p>
+              <h4>Results for <b>{{ __selected }}</b> found in {{ __took }}ms</h4>
 
               <ul class='simple'>
-              <li class='autosuggest-item capitalized boxo'
-              ng-repeat="obj in __hits | limitTo: 5" ng-click='onSelect(obj, "name")'>
-              {{ obj.str }}
-              </li>
+                <li class='autosuggest-item'
+                  ng-repeat="obj in __hits | limitTo: 5" ng-click='onSelect(obj, "name")'>
+                  {{ obj.str }}
+                </li>
               </ul>
             </div>
         </div>
 
         <div class="half pull-right vertical-align">
-          <div>
+          <div class="text-right">
             <h1>Try out our knowledgebase for medical terms and synonyms</h1>
 
             <p>This is what we use to make our searches more reliable and complete so we can get the best results.</p>

@@ -5,7 +5,6 @@ var app = angular.module('ctSite', []);
 app.directive('typing', function ($timeout, $window) {
   return function (scope, element, attrs) {
     element.bind("blur keydown", function(event) {
-      console.log("What")
       $timeout.cancel($window.__typingTimer);
 
       if (event.type === "keydown") {
@@ -23,7 +22,7 @@ app.directive('typing', function ($timeout, $window) {
               scope.$eval(attrs.typing);
             });
 
-          }, 200);
+          }, 140);
       }
     });
   };
@@ -111,33 +110,33 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
     }
   };
 
-  var inputElem = document.getElementById("apiInput");
-  var autosuggestElem = document.getElementById("autosuggest");
-  var offsetY = autosuggestElem.offsetTop - 200;
+  // var inputElem = document.getElementById("apiInput");
+  // var autosuggestElem = document.getElementById("autosuggest");
+  // var offsetY = autosuggestElem.offsetTop - 200;
 
-  var scrollObject = {};
-  window.onscroll = getScrollPosition;
+  // var scrollObject = {};
+  // window.onscroll = getScrollPosition;
 
-  var captionLength = 0;
-  var caption = "Anky spondy";
+  // var captionLength = 0;
+  // var caption = "Anky spondy";
 
-  var __type = function() {
-      var val = caption.substr(0, captionLength++);
-      inputElem.value = val;
+  // var __type = function() {
+  //     var val = caption.substr(0, captionLength++);
+  //     inputElem.value = val;
 
-      Suggest(val);
+  //     Suggest(val);
 
-      if (captionLength < caption.length+1) {
-          setTimeout(__type, 220);
-      }
-  }
+  //     if (captionLength < caption.length+1) {
+  //         setTimeout(__type, 220);
+  //     }
+  // }
 
-  function getScrollPosition() {
-      // If you want to check distance
-      if (window.pageYOffset > offsetY) {
-          __type();
-      }
-  }
+  // function getScrollPosition() {
+  //     // If you want to check distance
+  //     if (window.pageYOffset > offsetY) {
+  //         __type();
+  //     }
+  // }
 
   /*
   $scope.startSynonymBrowser = function(term) {

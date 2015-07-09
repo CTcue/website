@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -139,9 +139,12 @@ body {
   font-size: 1.5em;
   line-height: 1.6;
   font-weight: 400;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   color: #3e3e3e;
   background: #fafafa;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
 }
 html,
 body {
@@ -212,6 +215,9 @@ h6 {
 }
 p {
   margin-top: 0;
+}
+b {
+  font-weight: 500;
 }
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -362,7 +368,6 @@ nav .active {
 }
 #autosuggest {
   padding: 75px 0;
-  text-align: right;
 }
 #autosuggest .vertical-align {
   display: table;
@@ -495,4 +500,66 @@ nav .active {
   width: 52%;
   height: 55px;
   margin: 0 auto;
+}
+#autosuggest .pull-left {
+  margin-top: 60px;
+}
+.text-right {
+  text-align: right;
+}
+.autocomplete-results,
+.form-field > input {
+  width: 80%;
+  padding: 20px 0 20px 24px;
+  border: 1px solid #ddd;
+}
+.autocomplete-results {
+  margin-top: 12px;
+  background: #fff;
+  padding-top: 14px;
+  padding-bottom: 0px;
+}
+.autocomplete-results h4 {
+  font-size: 1em;
+  color: #aaa;
+}
+.autocomplete-results li {
+  padding: 6px 0;
+  text-transform: capitalize;
+  border-bottom: 1px solid #eee;
+  margin-left: -24px;
+  padding-left: 24px;
+}
+.form-field {
+  position: relative;
+}
+.form-field > input {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 400;
+  display: block;
+  padding-top: 40px;
+  outline: 0;
+}
+.form-field > label {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  color: #428bca;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.form-field .label-default {
+  color: #afafaf;
+  opacity: 0;
+}
+.form-field .typing + label {
+  top: 12px;
+  color: #03a9f4;
+  opacity: 1;
 }

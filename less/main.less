@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -14,8 +14,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -55,16 +55,20 @@ table {
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
-  font-size: 62.5%; 
+  font-size: 62.5%;
 }
 
 body {
-  font-size: 1.5em; 
+  font-size: 1.5em;
   line-height: 1.6;
   font-weight: 400;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  color: @body-text; 
+  color: @body-text;
   background: #fafafa;
+
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html, body {
@@ -76,7 +80,7 @@ html, body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-weight: 300; 
+  font-weight: 300;
 }
 
 h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem; color: @header-blue;}
@@ -97,7 +101,11 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 }
 
 p {
-  margin-top: 0; 
+  margin-top: 0;
+}
+
+b {
+  font-weight:500;
 }
 
 /* Clearing
@@ -149,7 +157,7 @@ p {
 @header-blue: #004E72;
 @body-text: #3E3E3E;
 @link-blue: #03A9F4;
-@section-background: #E8EBF0; 
+@section-background: #E8EBF0;
 
 // retina.less
 // A helper mixin for applying high-resolution background images (http://www.retinajs.com)
@@ -299,7 +307,6 @@ nav {
 
 #autosuggest {
   padding: 75px 0;
-  text-align: right;
 
   .vertical-align {
     display: table;
@@ -425,7 +432,7 @@ nav {
 
   .team-member:nth-child(3) {
     margin-right: 0;
-  } 
+  }
 }
 
 #call-to-action {
@@ -447,4 +454,82 @@ nav {
   }
 }
 
+///////////////////////////////
+// AUTOCOMPLETE
+///////////////////////////////
 
+#autosuggest .pull-left {
+  margin-top:60px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.autocomplete-results, .form-field > input {
+  width: 80%;
+  padding: 20px 0 20px 24px;
+  border: 1px solid #ddd;
+}
+
+.autocomplete-results {
+  margin-top: 12px;
+  background:#fff;
+
+  padding-top:14px;
+  padding-bottom:0px;
+}
+
+.autocomplete-results h4 {
+  font-size:1em;
+  color:#aaa;
+}
+
+.autocomplete-results li {
+  padding:6px 0;
+  text-transform: capitalize;
+  border-bottom:1px solid #eee;
+
+  margin-left:-24px;
+  padding-left:24px;
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-field > input {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: 400;
+  display: block;
+
+  padding-top:40px;
+  outline:0;
+}
+
+.form-field > label {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  color: #428bca;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  -webkit-transition:all linear 0.2s;
+  -moz-transition:all linear 0.2s;
+  transition:all linear 0.2s;
+}
+
+.form-field .label-default {
+  color: #afafaf;
+  opacity: 0;
+}
+
+.form-field .typing + label {
+  top:12px;
+  color:@link-blue;
+  opacity: 1;
+}
