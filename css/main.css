@@ -1,8 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
-   License: none (public domain)
-*/
+   License: none (public domain) */
 html,
 body,
 div,
@@ -145,14 +144,10 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  /*.at2x('../img/footer-border.png', 100%, 10px);
-  background-repeat: no-repeat;
-  background-position: bottom;*/
 }
 html,
 body {
   height: 100%;
-  overflow: auto;
 }
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
