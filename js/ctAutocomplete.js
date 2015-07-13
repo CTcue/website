@@ -1,13 +1,5 @@
 var app = angular.module('ctSite', []);
 
-app.controller('nav', function($scope, $location, $anchorScroll) {
-
-  $scope.scrollTo = function(section) {
-      $location.hash(section);
-      $anchorScroll();
-  }
-});
-
 // If you type in an input field or press enter while focused
 // the event fires
 app.directive('typing', function ($timeout, $window) {
