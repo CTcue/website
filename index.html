@@ -34,7 +34,7 @@
 
           <div class="cta-container">
             <a href="" class="button pull-left">Get started</a>
-            <a href="" class="link">Learn more</a>
+            <a href="#about" class="link">Learn more</a>
           </div>
         </div>
 
@@ -191,15 +191,20 @@
       </div>
     </section>
 
-    <section id="call-to-action">
+    <section id="contact">
       <div class="container">
         <h1>Efficiently unleash cross-media information without cross-media value.
         Quickly maximize timely deliverables for real-time schemas.
         Unleash cross-media information without cross-media maximum value.</h1>
 
-        <div class="cta-container">
-          <a href="" class="button pull-left">Try now</a>
-          <a href="" class="button pull-right">Contact us</a>
+        <a href="" class="button">Try now</a>
+        <a href="" class="button">Contact us</a>
+
+        <div class="full">
+          <p>CTcue</p>
+          <p>Science Park 402 1098XYH</p>
+          <p>Amsterdam, The Netherlands</p>
+          <p>info@ctcue.com</p>
         </div>
       </div>
     </section>
@@ -216,6 +221,10 @@
         }
 
         $("#nav-bar a").click(function() {
+            $($(this).attr('href')).scrollView();
+        });
+
+        $(".link").click(function() {
             $($(this).attr('href')).scrollView();
         });
     </script>
