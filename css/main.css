@@ -145,10 +145,14 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
+  /*.at2x('../img/footer-border.png', 100%, 10px);
+  background-repeat: no-repeat;
+  background-position: bottom;*/
 }
 html,
 body {
   height: 100%;
+  overflow: auto;
 }
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -247,6 +251,17 @@ b {
     padding: 0 20px;
     margin: 0 auto;
   }
+  .half {
+    width: 48%;
+  }
+  .half img {
+    max-width: 100%;
+    height: auto;
+  }
+  .full {
+    display: block;
+    width: 100%;
+  }
 }
 /* LESS Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -336,13 +351,6 @@ nav .active {
 }
 .link:hover {
   color: #03a9f4;
-}
-.half {
-  width: 48%;
-}
-.half img {
-  max-width: 100%;
-  height: auto;
 }
 #about {
   margin-top: 75px;
@@ -485,10 +493,19 @@ nav .active {
 #team .team-member:nth-child(3) {
   margin-right: 0;
 }
-#call-to-action {
+#contact {
   text-align: center;
+  background-image: url('../img/footer-border.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
-#call-to-action h1 {
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  #contact {
+    background-image: url("../img/footer-border@2x.png");
+    background-size: 100% 10px;
+  }
+}
+#contact h1 {
   font-size: 3.0rem;
   width: 80%;
   margin: 0 auto;
@@ -496,10 +513,22 @@ nav .active {
   line-height: 70px;
   color: #004e72;
 }
-#call-to-action .cta-container {
-  width: 52%;
-  height: 55px;
+#contact .button {
+  display: inline-block;
   margin: 0 auto;
+}
+#contact .button:first-of-type {
+  margin-right: 40px;
+}
+#contact .full {
+  margin: 75px 0 40px 0;
+}
+#contact p {
+  font-size: 2.0rem;
+  color: #004e72;
+  display: inline-block;
+  margin: 0 auto;
+  margin-right: 40px;
 }
 #autosuggest .pull-left {
   margin-top: 60px;
