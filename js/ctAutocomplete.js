@@ -44,6 +44,9 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
   $scope.__currentTerm  = {};
   $scope.__currentTerms = [];
 
+  $scope.synonymsList;
+  $scope.selectedTerm;
+
   var previousTerm = "";
 
   function Suggest(val, added) {
@@ -70,44 +73,14 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
   $scope.APIsuggestions = Suggest;
 
   $scope.onSelect = function(item, fieldName) {
-    if (typeof item !== 'undefined') {
-      if (item && !!item.cui && item.cui) {
-        $scope.__hits = false;
+    $scope.selectedTerm = item.str;
+    // Add autocomplete terms
+    $http.post(URL + "/expand", { 'query' : item.cui })
+      .success(function(terms) {
+        terms = terms.filter(function(e){ return e; });
 
-        // TODO can change this _id to "cui"
-        var saveObj = {
-          '_id' : item.cui,
-          'str' : item.str,
-          'terms'    : [item.str],
-          'selected' : [item.str]
-        }
-
-        // Add autocomplete terms
-        $http.post(URL + "/expand", { 'query' : item.cui })
-          .success(function(terms) {
-              terms = terms.filter(function(e){ return e; });
-
-              saveObj.terms    = terms;
-              saveObj.selected = _.clone(terms);
-
-              $scope.emptyForm = false;
-          });
-
-        if (!!item.reason) {
-          saveObj.suggested = true;
-        }
-
-        if (!!$scope.item[fieldName] && $scope.item[fieldName].length > 0) {
-            $scope.item[fieldName].push(saveObj);
-        }
-        else {
-            $scope.item[fieldName] = [saveObj];
-        }
-
-        $scope.__placeholder = "You can include another term";
-        $scope.__selected = "";
-      }
-    }
+        $scope.synonymsList = terms;
+      });
   };
 
   ////////////////////////////
@@ -144,11 +117,4 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
           __type();
       }
   }
-
-  /*
-  $scope.startSynonymBrowser = function(term) {
-      $scope.__currentTerm  = term;
-      $scope.__currentTerms = _.uniq(_.clone(term.terms));
-  };
-  */
 });

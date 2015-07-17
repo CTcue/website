@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>CTcue</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/angular.min.js"></script>
@@ -16,45 +17,59 @@
         <a href="" class="login-app">Login</a>
 
         <nav id="nav-bar">
-          <a href="#" class="active">CTcue</a>
+          <a href="#about">CTcue</a>
           <a href="#vision">Vision</a>
           <a href="#team">Team</a>
           <a href="#partners">Partners</a>
           <a href="#contact">Contact</a>
         </nav>
+
+        <div class="mobile-nav-container">
+          <button class="lines-button arrow arrow-left" type="button" role="button" aria-label="Toggle Navigation">
+            <span class="lines"></span>
+          </button>
+        </div>
       </div>
+
+      <nav id="mobile-nav">
+        <a href="#about">CTcue</a>
+        <a href="#vision">Vision</a>
+        <a href="#team">Team</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
 
     <div id="page-header">
       <div class="container">
-        <div class="half pull-left">
-          <h1>Find the right patients, faster and easier</h1>
+      
+      <div class="half pull-right">
+        <img src="img/screen-placeholder.png" alt="CTcue Results">
+      </div>
 
-          <p class="lead">CTcue is fully compliant and takes care of the IT headache to return structured results</p>
+        <div class="half pull-left">
+          <h1>Finding the right patients instantly</h1>
+
+          <p class="lead">CTcue's fully compliant proces let's you search through all patient data including clinical notes, transfer notes, discharge letters et cetera.</p>
 
           <div class="cta-container">
             <a href="" class="button pull-left">Get started</a>
             <a href="#about" class="link">Learn more</a>
           </div>
         </div>
-
-        <div class="half pull-right">
-          <img src="img/screen-placeholder.png" alt="CTcue Results">
-        </div>
       </div>
     </div>
 
     <section id="about">
       <div class="container">
-        <h1>Efficiently unleash cross-media information without cross-media value.
-        Quickly maximize timely deliverables for real-time schemas.
-        Unleash cross-media information without cross-media maximum value.</h1>
+        <h1>You as a doctor needs to share the need within the hospitals different departments. From that point we will support you to overcome the internal challenges. Internal IT support is limited to a couple of days. The CTcue platform searches on anonymized patient data and runs exclusively within the hospital's environment, which makes the process compliant.</h1>
       </div>
     </section>
 
     <section id="autosuggest" ng-app="ctSite">
-      <div class="container">
-        <div class="half pull-left" ng-controller="ctAutocomplete">
+      <div class="container" ng-controller="ctAutocomplete">
+        <div class="half pull-left">
+          <div class="autosuggest-container">
             <div class="form-field">
                 <input
                   id="apiInput"
@@ -63,12 +78,11 @@
                   placeholder='Search through our knowledge base'
                   ng-model='__selected'
                   typing='APIsuggestions(__selected, item.name)'
-                  ng-class='{ typing: __selected.length > 1 || hacking }'>
+                  ng-class='{ "typing" : __selected.length > 1 || hacking, "no-searchterm" : __selected.length == 0 }'>
 
-                <label ng-sho="__selected" for="apiInput" class="label-default">
+                <label ng-show="__selected.length > 1 || hacking" for="apiInput" class="label-default">
                   Search through our knowledge base
-                </label>
-
+                </label>  
             </div>
 
             <div class='full' ng-if='__noResult'>
@@ -81,17 +95,34 @@
               <ul class='simple'>
                 <li class='autosuggest-item'
                   ng-repeat="obj in __hits | limitTo: 5" ng-click='onSelect(obj, "name")'>
-                  {{ obj.str }}
+                  <span class="pull-left">{{ obj.str }}</span>
+                  <span class="synonyms-link">Show synonyms</span>
                 </li>
               </ul>
             </div>
+          </div>
+
+          <div class="autosuggest-mobile">
+            <img src="img/ct-autosuggest.gif" alt="CTcue autosuggest" data-no-retina>
+          </div>
         </div>
 
         <div class="half pull-right vertical-align">
-          <div class="text-right">
+          <div class="text-right" ng-if="!synonymsList">
             <h1>Try out our knowledgebase for medical terms and synonyms</h1>
 
             <p>This is what we use to make our searches more reliable and complete so we can get the best results.</p>
+          </div>
+
+          <div ng-if="synonymsList.length > 0">
+            <h2>{{ selectedTerm }}<span>{{ synonymsList.length }} synonyms</span></h2>
+            <ul class="synonym-list">
+              <li ng-repeat="synonym in synonymsList | limitTo:16">
+                {{ synonym }}
+              </li>
+            </ul>
+
+            <p ng-if="synonymsList.length > 16" class="other-synonyms">And {{ synonymsList.length - 16 }} other synonyms</p>
           </div>
         </div>
       </div>
@@ -101,7 +132,7 @@
       <div class="container">
         <h1>Better healthcare for everyone</h1>
 
-        <p>Taco bell chihuahua playa troll dolls gettin jiggy wit it Y2K, hotmail aaahh real monsters zebra stripes ring pop catsuit wesley snipes. Mia hamm animated gifs discovery zone fly chandler bing, sega genesis dolly the sheep vhs slap bracelet acid wash furby. Schindlers list baywatch mario lemieux dsl roseanne doug. </p>
+        <p>Our platform connects all stakeholders in creating a healthier world.</p>
       </div>
     </section>
 
@@ -109,26 +140,52 @@
       <div class="container">
         <h1>Our partners</h1>
 
-        <div class="half">
-          <img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
-          <img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
-          <img src="img/partners/Isala.png" alt="Isala">
+        <div class="row">
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/Isala.png" alt="Isala">
+          </div>
         </div>
 
-        <div class="half">
-          <img src="img/partners/Janssen.png" alt="Janssen Pharmaceuticals">
-          <img src="img/partners/Quintiles.png" alt="Quintiles">
+        <div class="row">
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/Janssen.png" alt="Janssen Pharmaceuticals">
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/Quintiles.png" alt="Quintiles">
+          </div>
         </div>
 
-        <div class="half">
-          <img src="img/partners/Sanofi.png" alt="Sanofi">
-          <img src="img/partners/Amgen.png" alt="Amgen">
-          <img src="img/partners/GSK.png" alt="GlaxoSmithKline">
+        <div class="row">
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/Sanofi.png" alt="Sanofi">
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/Amgen.png" alt="Amgen">
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/GSK.png" alt="GlaxoSmithKline">
+          </div>
         </div>
 
-        <div class="half">
-          <img src="img/partners/EY.png" alt="EY">
-          <img src="img/partners/HVG.png" alt="HVG">
+        <div class="row">
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/EY.png" alt="EY">
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span><img src="img/partners/HVG.png" alt="HVG">
+          </div>
         </div>
       </div>
     </section>
@@ -139,53 +196,53 @@
           <div>
             <h1>Meet the team</h1>
 
-            <p>Taco bell chihuahua playa troll dolls gettin jiggy wit it Y2K, hotmail aaahh real monsters zebra stripes ring pop catsuit wesley snipes. Mia hamm animated gifs discovery zone fly chandler bing.</p>
+            <p>Entrepreneurial, user centered, running towards fires, caring about health care are just some of the ways we would describe our team. Combined we have years of experience in entrepreneurship, consulting, engineering and designing. Our drive to improve health care through technological innovations unites us.</p>
           </div>
         </div>
 
         <div class="half pull-right">
-          <div class="team-member">
-            <img src="img/team/roel-lakmaker.png" alt="Roel Lakmaker">
+          <div class="center">
+            <div class="team-member">
+              <img src="img/team/roel-lakmaker.png" alt="Roel Lakmaker">
 
-            <h2>Roel Lakmaker</h2>
+              <h2>Roel Lakmaker</h2>
 
-            <p>Founder</p>
-            <p>CEO</p>
-          </div>
+              <p>Founder</p>
+              <p>CEO</p>
+            </div>
 
-          <div class="team-member">
-            <img src="img/team/jochem-de-boer.png" alt="Jochem de Boer">
+            <div class="team-member">
+              <img src="img/team/jochem-de-boer.png" alt="Jochem de Boer">
 
-            <h2>Jochem de Boer</h2>
+              <h2>Jochem de Boer</h2>
 
-            <p>Co-founder</p>
-            <p>CTO</p>
-          </div>
+              <p>Co-founder</p>
+              <p>CTO</p>
+            </div>
 
-          <div class="team-member">
-            <img src="img/team/fabien-tesselaar.png" alt="Fabien Tesselaar">
+            <div class="team-member">
+              <img src="img/team/fabien-tesselaar.png" alt="Fabien Tesselaar">
 
-            <h2>Fabien Tesselaar</h2>
+              <h2>Fabien Tesselaar</h2>
 
-            <p>Full Stack Developer</p>
-          </div>
-        </div>
+              <p>Full Stack Developer</p>
+            </div>
 
-        <div class="half pull-right">
-          <div class="team-member">
-            <img src="img/team/nick-visser.png" alt="Nick Visser">
+            <div class="team-member">
+              <img src="img/team/nick-visser.png" alt="Nick Visser">
 
-            <h2>Nick Visser</h2>
+              <h2>Nick Visser</h2>
 
-            <p>Frontend Developer</p>
-          </div>
+              <p>Frontend Developer</p>
+            </div>
 
-          <div class="team-member">
-            <img src="img/team/mike-van-rossum.png" alt="Mike van Rossum">
+            <div class="team-member">
+              <img src="img/team/mike-van-rossum.png" alt="Mike van Rossum">
 
-            <h2>Mike van Rossum</h2>
+              <h2>Mike van Rossum</h2>
 
-            <p>Full Stack Developer</p>
+              <p>Full Stack Developer</p>
+            </div>
           </div>
         </div>
       </div>
@@ -193,12 +250,10 @@
 
     <section id="contact">
       <div class="container">
-        <h1>Efficiently unleash cross-media information without cross-media value.
-        Quickly maximize timely deliverables for real-time schemas.
-        Unleash cross-media information without cross-media maximum value.</h1>
+        <h1>Do you want to know more? <br />CTcue is also starting pilots. It is free. If you are interested please contact us!</h1>
 
         <a href="" class="button">Try now</a>
-        <a href="" class="button">Contact us</a>
+        <a href="mailto:info@ctcue.com?subject=I%20would%20like%20to%20know%20more%20about%20CTcue" class="button">Contact us</a>
 
         <div class="full">
           <p>CTcue</p>
@@ -226,6 +281,23 @@
 
         $(".link").click(function() {
             $($(this).attr('href')).scrollView();
+        });
+
+        $(".lines-button").click(function(){
+          if($(this).hasClass("close")) {
+            $("#mobile-nav").slideUp( "fast", function() {
+                // Animation complete.
+                $("#mobile-nav").css("display","none");
+              });
+            $(this).removeClass("close");
+          } else {
+            
+            $("#mobile-nav").slideDown( "fast", function() {
+                // Animation complete.
+                $("#mobile-nav").css("display","block");
+              });
+            $(this).addClass("close");
+          }
         });
     </script>
   </body>
