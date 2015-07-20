@@ -447,8 +447,11 @@ b {
     display: block;
     margin-bottom: 40px;
   }
-  #autosuggest .text-right {
+  #autosuggest .autosuggest-text {
     text-align: center;
+  }
+  #autosuggest .autosuggest-text h1 {
+    margin-bottom: 40px;
   }
   #contact h1 {
     font-size: 2.5rem;
@@ -566,7 +569,7 @@ b {
   #autosuggest .autosuggest-mobile {
     display: block;
   }
-  #autosuggest .text-right {
+  #autosuggest .autosuggest-text {
     text-align: center;
   }
   #contact h1 {
@@ -654,6 +657,7 @@ b {
   }
   .login-app {
     display: block;
+    outline: none;
   }
   .container {
     max-width: 710px;
@@ -676,7 +680,7 @@ b {
   #autosuggest .autosuggest-mobile {
     display: none;
   }
-  #autosuggest .text-right {
+  #autosuggest .autosuggest-text {
     text-align: center;
   }
   #autosuggest .vertical-align {
@@ -685,6 +689,9 @@ b {
   }
   #vision .container {
     background-position: right center;
+  }
+  #team .container {
+    background-image: none;
   }
   #team .vertical-align {
     text-align: center;
@@ -804,13 +811,16 @@ b {
     font-size: 3.0rem;
     width: 80%;
   }
-  #autosuggest .text-right {
+  #autosuggest .autosuggest-text {
     text-align: right;
-  }
-  #autosuggest .vertical-align {
     display: table;
     overflow: hidden;
-    height: 359px;
+    height: 355px;
+  }
+  #autosuggest .autosuggest-text div {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
   }
   #partners .half {
     width: 100% !important;
@@ -1149,9 +1159,8 @@ b {
   display: inline-block;
   margin: 0 auto;
 }
-.text-right {
-  text-align: right;
-}
+/* Autocomplete
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .autocomplete-results {
   margin-top: 12px;
   background: #fff;
@@ -1207,6 +1216,7 @@ b {
 }
 .synonym-list {
   float: left;
+  width: 100%;
   list-style-type: disc;
 }
 .synonym-list li {
@@ -1215,4 +1225,84 @@ b {
   padding: 10px 10px 10px 0;
   float: left;
   font-size: 1.6rem;
+}
+/* Animations
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.synonyms-container {
+  position: relative;
+  height: 355px;
+}
+.autosuggest-text {
+  position: absolute;
+}
+.autosuggest-text.ng-leave {
+  animation: fadeOutUp 0.5s;
+}
+/*.autosuggest-text.ng-leave-active {
+  animation-delay: 0.5s;
+  animation-duration: 0;
+}
+*/
+.synonyms {
+  position: absolute;
+  width: 100%;
+}
+.synonyms.ng-enter {
+  animation: fadeInDown 0.5s;
+}
+.synonyms.delay {
+  animation-delay: 0.5s;
+  animation-duration: 0;
+}
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }

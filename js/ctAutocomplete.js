@@ -1,4 +1,4 @@
-var app = angular.module('ctSite', []);
+var app = angular.module('ctSite', ['ngAnimate']);
 
 // If you type in an input field or press enter while focused
 // the event fires
@@ -46,6 +46,7 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
 
   $scope.synonymsList;
   $scope.selectedTerm;
+  $scope.showText = true;
 
   var previousTerm = "";
 
@@ -73,6 +74,8 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
   $scope.APIsuggestions = Suggest;
 
   $scope.onSelect = function(item, fieldName) {
+    $scope.showText = false;
+    $scope.synonymsList = null;
     $scope.selectedTerm = item.str;
     // Add autocomplete terms
     $http.post(URL + "/expand", { 'query' : item.cui })

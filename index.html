@@ -5,6 +5,7 @@
     <title>CTcue</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/ctAutocomplete.js"></script>
   </head>
@@ -107,22 +108,26 @@
           </div>
         </div>
 
-        <div class="half pull-right vertical-align">
-          <div class="text-right" ng-if="!synonymsList">
-            <h1>Try out our knowledgebase for medical terms and synonyms</h1>
+        <div class="half pull-right">
+          <div class="synonyms-container">
+            <div class="autosuggest-text" ng-if="showText">
+              <div>
+                <h1>Try out our knowledgebase for medical terms and synonyms</h1>
 
-            <p>This is what we use to make our searches more reliable and complete so we can get the best results.</p>
-          </div>
+                <p>This is what we use to make our searches more reliable and complete so we can get the best results.</p>
+              </div>
+            </div>
 
-          <div ng-if="synonymsList.length > 0">
-            <h2>{{ selectedTerm }}<span>{{ synonymsList.length }} synonyms</span></h2>
-            <ul class="synonym-list">
-              <li ng-repeat="synonym in synonymsList | limitTo:16">
-                {{ synonym }}
-              </li>
-            </ul>
+            <div class="synonyms" ng-if="synonymsList.length > 0">
+              <h2>{{ selectedTerm }}<span>{{ synonymsList.length }} synonyms</span></h2>
+              <ul class="synonym-list">
+                <li ng-repeat="synonym in synonymsList | limitTo:10">
+                  {{ synonym }}
+                </li>
+              </ul>
 
-            <p ng-if="synonymsList.length > 16" class="other-synonyms">And {{ synonymsList.length - 16 }} other synonyms</p>
+              <p ng-if="synonymsList.length > 10" class="other-synonyms">And {{ synonymsList.length - 10 }} other synonyms</p>
+            </div>
           </div>
         </div>
       </div>
@@ -233,7 +238,7 @@
 
               <h2>Nick Visser</h2>
 
-              <p>Frontend Developer</p>
+              <p>User Experience Designer</p>
             </div>
 
             <div class="team-member">
@@ -265,40 +270,6 @@
     </section>
 
     <script src="js/retina.min.js"></script>
-    <script>
-        // http://stackoverflow.com/a/1586379/951517
-        $.fn.scrollView = function () {
-            return this.each(function () {
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top
-                }, 1000);
-            });
-        }
-
-        $("#nav-bar a").click(function() {
-            $($(this).attr('href')).scrollView();
-        });
-
-        $(".link").click(function() {
-            $($(this).attr('href')).scrollView();
-        });
-
-        $(".lines-button").click(function(){
-          if($(this).hasClass("close")) {
-            $("#mobile-nav").slideUp( "fast", function() {
-                // Animation complete.
-                $("#mobile-nav").css("display","none");
-              });
-            $(this).removeClass("close");
-          } else {
-            
-            $("#mobile-nav").slideDown( "fast", function() {
-                // Animation complete.
-                $("#mobile-nav").css("display","block");
-              });
-            $(this).addClass("close");
-          }
-        });
-    </script>
+    <script src="js/ctcue.js"></script>
   </body>
 </html>
