@@ -390,12 +390,12 @@ b {
     width: 100%;
   }
   #about h1 {
-    font-size: 2.5rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 75px 0;
-    line-height: 70px;
-    color: #004e72;
+    /*font-size: 2.5rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 75px 0;
+      line-height: 70px;
+      color: #004e72;*/
   }
   #team .vertical-align {
     text-align: center;
@@ -513,12 +513,12 @@ b {
     width: 100%;
   }
   #about h1 {
-    font-size: 2.5rem;
+    /*font-size: 2.5rem;
     width: 100%;
     margin: 0 auto;
     padding: 75px 0;
     line-height: 70px;
-    color: #004e72;
+    color: #004e72;*/
   }
   #team .vertical-align {
     text-align: center;
@@ -580,7 +580,7 @@ b {
   }
   #contact h1 {
     font-size: 2.5rem;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     padding: 75px 0;
     line-height: 70px;
@@ -819,10 +819,6 @@ b {
     width: 100%;
     height: 55px;
   }
-  #about h1 {
-    font-size: 3.0rem;
-    width: 80%;
-  }
   #autosuggest .autosuggest-text {
     text-align: right;
     display: table;
@@ -917,7 +913,7 @@ b {
   }
   #contact h1 {
     font-size: 3.0rem;
-    width: 80%;
+    width: 85%;
   }
   #contact p {
     font-size: 2.0rem;
@@ -997,6 +993,10 @@ b {
     padding-top: 40px;
     outline: 0;
   }
+  #contact h1 {
+    font-size: 3.0rem;
+    width: 85%;
+  }
 }
 /* CTcue Styling
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1005,6 +1005,8 @@ b {
 }
 .logo {
   float: left;
+  max-width: 50px;
+  height: auto;
 }
 .login-app {
   color: #03A9F4;
@@ -1013,8 +1015,8 @@ b {
   float: right;
   font-size: 1.6rem;
 }
-#page-header {
-  margin-top: 75px;
+#page-header .container {
+  padding: 75px 0;
 }
 #page-header p {
   font-size: 2.0rem;
@@ -1059,7 +1061,6 @@ b {
   color: #03a9f4;
 }
 #about {
-  margin-top: 75px;
   background-color: #e8ebf0;
   text-align: center;
 }
@@ -1067,12 +1068,24 @@ b {
   background-image: url('../img/about-background.png');
   background-repeat: no-repeat;
   background-position: left center;
+  padding: 75px 0;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
   #about .container {
     background-image: url("../img/about-background@2x.png");
-    background-size: 400px auto;
+    background-size: 360px auto;
   }
+}
+#about h1 {
+  font-size: 4.0rem;
+  width: 100%;
+  margin: 0 auto 40px auto;
+}
+#about p {
+  font-size: 1.6rem;
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 40px;
 }
 #autosuggest {
   padding: 75px 0;
@@ -1115,7 +1128,7 @@ b {
   background-repeat: no-repeat;
 }
 #vision h1 {
-  font-size: 5.0rem;
+  font-size: 4.0rem;
   margin-bottom: 40px;
 }
 #vision p {

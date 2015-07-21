@@ -334,13 +334,16 @@ b {
     width: 100%;
   }
 
-  #about h1 {
-    font-size: 2.5rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 75px 0;
-    line-height: 70px;
-    color: #004e72;
+  #about { 
+
+    h1 {
+      /*font-size: 2.5rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 75px 0;
+      line-height: 70px;
+      color: #004e72;*/
+    }
   }
 
   #team {
@@ -487,12 +490,12 @@ b {
   }
 
   #about h1 {
-    font-size: 2.5rem;
+    /*font-size: 2.5rem;
     width: 100%;
     margin: 0 auto;
     padding: 75px 0;
     line-height: 70px;
-    color: #004e72;
+    color: #004e72;*/
   }
 
   #team {
@@ -577,7 +580,7 @@ b {
   #contact {
     h1 {
       font-size: 2.5rem;
-      width: 100%;
+      width: 95%;
       margin: 0 auto;
       padding: 75px 0;
       line-height: 70px;
@@ -882,11 +885,6 @@ b {
     }
   }
 
-  #about h1 {
-    font-size: 3.0rem;
-    width: 80%;
-  }
-
   #autosuggest {
 
     .autosuggest-text {
@@ -1007,7 +1005,7 @@ b {
   #contact {
     h1 {
       font-size: 3.0rem;
-      width: 80%;
+      width: 85%;
     }
 
     p {
@@ -1101,6 +1099,13 @@ b {
     padding-top:40px;
     outline:0;
   }
+
+  #contact {
+    h1 {
+      font-size: 3.0rem;
+      width: 85%;
+    }
+  }
 }
 
 /* CTcue Styling
@@ -1112,6 +1117,8 @@ b {
 
 .logo {
   float: left;
+  max-width: 50px;
+  height: auto;
 }
 
 .login-app {
@@ -1123,7 +1130,10 @@ b {
 }
 
 #page-header {
-  margin-top: 75px;
+  
+  .container {
+    padding: 75px 0;
+  }
 
   p {
     font-size: 2.0rem;
@@ -1175,14 +1185,27 @@ b {
 }
 
 #about {
-  margin-top: 75px;
   background-color: @section-background;
   text-align: center;
 
   .container {
-    .at2x('../img/about-background.png', 400px);
+    .at2x('../img/about-background.png', 360px);
     background-repeat: no-repeat;
     background-position: left center;
+    padding: 75px 0;
+  }
+
+  h1 {
+    font-size: 4.0rem;
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+  
+  p {
+    font-size: 1.6rem;
+    max-width: 960px;
+    margin: 0 auto;
+    line-height: 40px;
   }
 }
 
@@ -1237,7 +1260,7 @@ b {
   }
 
   h1 {
-    font-size: 5.0rem;
+    font-size: 4.0rem;
     margin-bottom: 40px;
   }
 
