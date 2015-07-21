@@ -93,7 +93,7 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
   $scope.hacking = false;
   var inputElem = document.getElementById("apiInput");
   var autosuggestElem = document.getElementById("autosuggest");
-  var offsetY = autosuggestElem.offsetTop - 200;
+  var offsetY = autosuggestElem.offsetTop - 300;
 
   var scrollObject = {};
   window.onscroll = getScrollPosition;

@@ -184,6 +184,10 @@ b {
   #team {
     .container {
       background-image: none;
+
+      .vertical-align p {
+        text-align: left;
+      }
     }
   }
 
@@ -410,7 +414,7 @@ b {
     }
 
     .autosuggest-text {
-      text-align: center;
+      text-align: left;
 
       h1 {
         margin-bottom: 40px;
@@ -562,7 +566,11 @@ b {
     }
 
     .autosuggest-text {
-      text-align: center;
+      text-align: left;
+    }
+
+    .synonyms-container.show-text {
+      height: 307px;
     }
   }
 
@@ -622,6 +630,10 @@ b {
         margin: 0 40px 0 0;
       }
     }
+  }
+
+  .synonyms-container.show-text {
+    height: 234px;
   }
 }
 
@@ -705,12 +717,16 @@ b {
     }
 
     .autosuggest-text {
-      text-align: center;
+      text-align: left;
     }
 
     .vertical-align {
       display: block;
       height: auto;
+    }
+
+    .synonyms-container.show-text {
+      height: 186px;
     }
   }
 
@@ -885,6 +901,10 @@ b {
         height: 100%;
       }
     }
+
+    .synonyms-container.show-text {
+      height: 355px;
+    }
   }
 
   #partners .half {
@@ -966,10 +986,6 @@ b {
       margin-bottom: 0;
     }
   }
-
-  /*.autocomplete-results {
-   
-  }*/
 
   .autocomplete-results, .form-field > input {
     width: 95%;
@@ -1257,6 +1273,10 @@ b {
       margin: 0 auto;
       vertical-align: middle;
     }
+
+    a {
+      outline: none;
+    }
   }
 }
 
@@ -1376,17 +1396,16 @@ b {
 
 .autosuggest-text {
   position: absolute;
+
+  p {
+    font-size: 1.6rem;
+  }
 }
 
 .autosuggest-text.ng-leave {
   animation: fadeOutUp 0.5s;
 }
 
-/*.autosuggest-text.ng-leave-active {
-  animation-delay: 0.5s;
-  animation-duration: 0;
-}
-*/
 .synonyms {
   position: absolute;
   width: 100%;

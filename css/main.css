@@ -252,6 +252,9 @@ b {
   #team .container {
     background-image: none;
   }
+  #team .container .vertical-align p {
+    text-align: left;
+  }
   /* Mobile navigation
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .mobile-nav-container {
@@ -448,7 +451,7 @@ b {
     margin-bottom: 40px;
   }
   #autosuggest .autosuggest-text {
-    text-align: center;
+    text-align: left;
   }
   #autosuggest .autosuggest-text h1 {
     margin-bottom: 40px;
@@ -570,7 +573,10 @@ b {
     display: block;
   }
   #autosuggest .autosuggest-text {
-    text-align: center;
+    text-align: left;
+  }
+  #autosuggest .synonyms-container.show-text {
+    height: 307px;
   }
   #contact h1 {
     font-size: 2.5rem;
@@ -617,6 +623,9 @@ b {
     float: left;
     display: block;
     margin: 0 40px 0 0;
+  }
+  .synonyms-container.show-text {
+    height: 234px;
   }
 }
 /* Larger than tablet */
@@ -681,11 +690,14 @@ b {
     display: none;
   }
   #autosuggest .autosuggest-text {
-    text-align: center;
+    text-align: left;
   }
   #autosuggest .vertical-align {
     display: block;
     height: auto;
+  }
+  #autosuggest .synonyms-container.show-text {
+    height: 186px;
   }
   #vision .container {
     background-position: right center;
@@ -822,6 +834,9 @@ b {
     vertical-align: middle;
     height: 100%;
   }
+  #autosuggest .synonyms-container.show-text {
+    height: 355px;
+  }
   #partners .half {
     width: 100% !important;
   }
@@ -884,9 +899,6 @@ b {
   #team .team-member:nth-child(n+4) {
     margin-bottom: 0;
   }
-  /*.autocomplete-results {
-   
-  }*/
   .autocomplete-results,
   .form-field > input {
     width: 95%;
@@ -1134,6 +1146,9 @@ b {
   margin: 0 auto;
   vertical-align: middle;
 }
+#partners .partner-container a {
+  outline: none;
+}
 #team {
   background-color: #e8ebf0;
 }
@@ -1235,14 +1250,12 @@ b {
 .autosuggest-text {
   position: absolute;
 }
+.autosuggest-text p {
+  font-size: 1.6rem;
+}
 .autosuggest-text.ng-leave {
   animation: fadeOutUp 0.5s;
 }
-/*.autosuggest-text.ng-leave-active {
-  animation-delay: 0.5s;
-  animation-duration: 0;
-}
-*/
 .synonyms {
   position: absolute;
   width: 100%;

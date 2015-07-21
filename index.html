@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Find the right patients instantly. CTcue's fully compliant proces let's you search through all patient data including clinical notes, transfer notes, discharge letters et cetera.">
+    <meta name="author" content="CTcue">
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <title>CTcue</title>
+
     <link rel="stylesheet" href="css/main.css">
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
@@ -15,7 +23,7 @@
       <div class="container">
         <img class="logo" src="img/ctcue-logo.png" alt="CTcue">
 
-        <a href="" class="login-app">Login</a>
+        <a href="http://ctcue.com/app/#/" class="login-app">Login</a>
 
         <nav id="nav-bar">
           <a href="#about">CTcue</a>
@@ -109,7 +117,7 @@
         </div>
 
         <div class="half pull-right">
-          <div class="synonyms-container">
+          <div class="synonyms-container" ng-class="{ 'show-text' : showText }">
             <div class="autosuggest-text" ng-if="showText">
               <div>
                 <h1>Try out our knowledgebase for medical terms and synonyms</h1>
@@ -143,53 +151,83 @@
 
     <section id="partners">
       <div class="container">
-        <h1>Our partners</h1>
+        <h1>Partners</h1>
 
         <div class="row">
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
+            <span class="helper"></span>
+            <a href="http://www.umcutrecht.nl/nl/" target="_blank">
+              <img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
+            </a>
           </div>
 
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
+            <span class="helper"></span>
+            <a href="http://www.spaarnegasthuis.nl/" target="_blank">
+              <img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
+            </a>
           </div>
 
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/Isala.png" alt="Isala">
+            <span class="helper"></span>
+            <a href="http://www.isala.nl/" target="_blank">
+              <img src="img/partners/Isala.png" alt="Isala">
+            </a>
           </div>
         </div>
 
         <div class="row">
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/Janssen.png" alt="Janssen Pharmaceuticals">
+            <span class="helper"></span>
+            <a href="http://www.janssennederland.nl/" target="_blank">
+              <img src="img/partners/Janssen.png" alt="Janssen Pharmaceuticals">
+            </a>
           </div>
 
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/Quintiles.png" alt="Quintiles">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/Sanofi.png" alt="Sanofi">
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/Amgen.png" alt="Amgen">
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/GSK.png" alt="GlaxoSmithKline">
+            <span class="helper"></span>
+            <a href="http://www.quintiles.com/nl-nl/locations/netherlands" target="_blank">
+              <img src="img/partners/Quintiles.png" alt="Quintiles">
+            </a>
           </div>
         </div>
 
         <div class="row">
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/EY.png" alt="EY">
+            <span class="helper"></span>
+            <a href="http://www.sanofi.nl/l/nl/nl/index.jsp" target="_blank">
+              <img src="img/partners/Sanofi.png" alt="Sanofi">
+            </a>
           </div>
 
           <div class="partner-container">
-            <span class="helper"></span><img src="img/partners/HVG.png" alt="HVG">
+            <span class="helper"></span>
+            <a href="http://www.amgen.nl/dutch/index.html#" target="_blank">
+              <img src="img/partners/Amgen.png" alt="Amgen">
+            </a>
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span>
+            <a href="http://www.gsk.com/" target="_blank">
+              <img src="img/partners/GSK.png" alt="GlaxoSmithKline">
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="partner-container">
+            <span class="helper"></span>
+            <a href="http://www.ey.com/NL/nl/Home" target="_blank">
+              <img src="img/partners/EY.png" alt="EY">
+            </a>
+          </div>
+
+          <div class="partner-container">
+            <span class="helper"></span>
+            <a href="http://www.hvglaw.nl/" target="_blank">
+              <img src="img/partners/HVG.png" alt="HVG">
+            </a>
           </div>
         </div>
       </div>
@@ -257,8 +295,10 @@
       <div class="container">
         <h1>Do you want to know more? <br />CTcue is also starting pilots. It is free. If you are interested please contact us!</h1>
 
-        <a href="" class="button">Try now</a>
-        <a href="mailto:info@ctcue.com?subject=I%20would%20like%20to%20know%20more%20about%20CTcue" class="button">Contact us</a>
+        <!-- <a href="" class="button">Try now</a> -->
+        <a href="mailto:info@ctcue.com?subject=I%20would%20like%20to%20know%20more%20about%20CTcue" class="button">
+          Get in touch
+        </a>
 
         <div class="full">
           <p>CTcue</p>
