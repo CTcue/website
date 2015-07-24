@@ -4,7 +4,11 @@ $(document).ready(function() {
       $($(this).attr('href')).scrollView();
   });
 
-  $(".link").click(function() {
+  $("#page-header .button").click(function() {
+      $($(this).attr('href')).scrollView();
+  });
+
+  $("#mobile-nav a").click(function() {
       $($(this).attr('href')).scrollView();
   });
 
