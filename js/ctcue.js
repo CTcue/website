@@ -78,7 +78,7 @@ $("#contactForm").submit(function() {
           setTimeout(function(){
             $(".success").slideUp( 300, function() {});
             $("#contactForm .button").slideDown( 300, function() {});
-          }, 25000);
+          }, 5000);
          });
        }
      });

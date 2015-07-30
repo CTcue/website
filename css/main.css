@@ -849,8 +849,12 @@ b {
   }
   #contact form .form-actions .success {
     display: none;
-    color: #73BB67;
     margin: 0;
+    background-color: #73bb67;
+    height: 100%;
+    color: #fff;
+    line-height: 47px;
+    font-size: 2.0rem;
   }
 }
 /* Larger than desktop */

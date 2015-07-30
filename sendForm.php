@@ -31,7 +31,7 @@ if(isset($_POST['email'])) {
   $email = trim($_POST['email']);
   $bericht = trim($_POST['message']);
 
-  $naar = 'info@ctcue.com'; // Waar moet het naartoe?
+  $naar = 'nick@ctcue.com'; // Waar moet het naartoe?
   $onderwerp = "Contactformulier: $email"; // Het onderwerp van het bericht
 
   $fout = false; // Om te kijken straks of er wat fout is
