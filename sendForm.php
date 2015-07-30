@@ -2,7 +2,7 @@
 
 include_once(dirname(__FILE__) . '/phpmailer/PHPMailerAutoload.php');
 
-function send_email($to, $title, $body, $from="info@ctcue.com") {
+function send_email($to, $title, $body) {
     $mail = new PHPMailer();
     $mail->IsSMTP();
     $mail->SMTPAuth = true;
@@ -14,7 +14,9 @@ function send_email($to, $title, $body, $from="info@ctcue.com") {
     // Gegevens
     $mail->Username = "admin@ctcue.com";
     $mail->Password = "U2nHXCZ8";
-    $mail->SetFrom($from);
+
+    $mail->From = "CTcue";
+    $mail->FromName = "CTcue";
 
     $mail->Subject = $title;
     $mail->Body = $body;
@@ -23,14 +25,14 @@ function send_email($to, $title, $body, $from="info@ctcue.com") {
     return $mail->send();
 }
 
-$naar = 'nick@ctcue.com'; // Waar moet het naartoe?
-$onderwerp = 'Contactformulier (ctcue.com)'; // Het onderwerp van het bericht
-
 if(isset($_POST['email'])) {
   $naam = trim($_POST['name']);
   $phone = trim($_POST['phone']);
   $email = trim($_POST['email']);
   $bericht = trim($_POST['message']);
+
+  $naar = 'info@ctcue.com'; // Waar moet het naartoe?
+  $onderwerp = "Contactformulier: $email"; // Het onderwerp van het bericht
 
   $fout = false; // Om te kijken straks of er wat fout is
   $EmailMessage  = "Name: " . $naam . " \n\n";
@@ -59,7 +61,7 @@ if(isset($_POST['email'])) {
   }
 
   if (!$fout) {
-    if (send_email($naar, $onderwerp, nl2br($EmailMessage), $email)) {
+    if (send_email($naar, $onderwerp, nl2br($EmailMessage))) {
       print '<p>The message is sent!</p>';
     }
     else {
