@@ -29,6 +29,27 @@ $(document).ready(function() {
       $(this).addClass("close");
     }
   });
+
+  //Form validation
+  $("#contactForm").validate({
+    rules: {
+      name: "required",
+
+      email: {
+        required: true,
+        email: true
+      },
+
+      message: "required"
+    },
+    messages: {
+      name: "Please enter your name",
+      email: {
+        required: "Please enter a valid email address"
+      },
+      message: "Please enter a message"
+    }
+  });
 });
 
 $.fn.scrollView = function () {
@@ -38,3 +59,29 @@ $.fn.scrollView = function () {
         }, 1000);
     });
 };
+
+// this is the id of the form
+$("#contactForm").submit(function() {
+
+    var url = "sendForm.php"; // the script where you handle the form input.
+
+    $.ajax({
+       type: "POST",
+       url: url,
+       data: $("#contactForm").serialize(), // serializes the form's elements.
+       success: function(data)
+       {
+         console.log(data); // show response from the php script.
+         $("#contactForm").find("input[type=text], textarea").val("");
+         $("#contactForm .button").slideUp( 300, function() {});
+         $(".success").slideDown( 300, function() {
+          setTimeout(function(){
+            $(".success").slideUp( 300, function() {});
+            $("#contactForm .button").slideDown( 300, function() {});
+          }, 25000);
+         });
+       }
+     });
+
+    return false; // avoid to execute the actual submit of the form.
+});
