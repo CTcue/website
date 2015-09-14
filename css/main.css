@@ -376,7 +376,7 @@ b {
     width: 100%;
   }
   #page-header .half.pull-right {
-    margin-bottom: 40px;
+    margin-top: 40px;
   }
   #page-header .cta-container a {
     float: none;
@@ -500,7 +500,7 @@ b {
     text-align: center;
   }
   #page-header .half.pull-right {
-    margin-bottom: 40px;
+    margin-top: 40px;
   }
   #page-header .cta-container a {
     float: none;
@@ -878,7 +878,7 @@ b {
     font-size: 4.0rem;
   }
   #page-header .half.pull-right {
-    margin-bottom: 0px;
+    margin-top: 20px;
   }
   #page-header .cta-container {
     width: 100%;
