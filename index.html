@@ -6,17 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find the right patients instantly. CTcue's fully compliant proces let's you search through all patient data including clinical notes, transfer notes, discharge letters et cetera.">
     <meta name="author" content="CTcue">
-    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <meta name="ROBOTS" content="index, follow">
     <link rel="shortcut icon" href="favicon.ico">
 
     <title>CTcue</title>
 
     <link rel="stylesheet" href="css/main.min.css">
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-animate.min.js"></script>
-    <script src="js/ctAutocomplete.js"></script>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
   </head>
 
   <body>
@@ -64,21 +59,20 @@
         </div>
 
         <div class="half pull-right">
-          <!-- <img src="img/ctcue-results.png" alt="CTcue Results"> -->
             <iframe width="100%" height="310" src="https://www.youtube.com/embed/PbJbrP9sUFM?modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
 
-    <section id="about">
+    <div id="about">
       <div class="container">
         <h1>All it takes is your enthusiasm, we take care of the rest</h1>
 
         <p>Introducing technical innovation in hospitals can be a challenge, we know. But we have done this so often that we know who to talk to and when. Even before implementation, we will be with you during talks and we will handle all the technical meetings. Next to technology we are fast becoming experts on medical data privacy laws. The CTcue platform searches on anonymized patient data and runs exclusively within the hospital's environment. Patient data will always be save.</p>
       </div>
-    </section>
+    </div>
 
-    <section id="autosuggest" ng-app="ctSite">
+    <div id="autosuggest" ng-app="ctSite">
       <div class="container" ng-controller="ctAutocomplete">
         <div class="half pull-left">
           <div class="autosuggest-container">
@@ -150,17 +144,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="vision">
+    <div id="vision">
       <div class="container">
         <h1>Bringing cutting edge innovation to healthcare</h1>
 
         <p>Perplexed by the discovery that clinicians can not easily search through their patient data we made it our mission to facilitate this. We bring the latest in information retrieval, natural language processing and machine learning to enable you to get the most value out of your Electronic Health Records. We wrap this in very user friendly interfaces so clinicians can use it without having to be an SQL database administrator on the side.</p>
       </div>
-    </section>
+    </div>
 
-    <section id="partners">
+    <div id="partners">
       <div class="container">
         <h1>Partners</h1>
 
@@ -242,9 +236,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="team">
+    <div id="team">
       <div class="container">
         <div class="half pull-left vertical-align">
           <div>
@@ -308,9 +302,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="contact">
+    <div id="contact">
       <div class="container">
         <h1>Do you want to know more? CTcue is also starting pilots. If you are interested please contact us!</h1>
 
@@ -351,8 +345,13 @@
           <p>+31 (0) 85 600 1037</p>
         </div>
       </div>
-    </section>
+    </div>
 
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/ctAutocomplete.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/retina.min.js"></script>
     <script src="js/ctcue.js"></script>
     <script>

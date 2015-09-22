@@ -105,7 +105,6 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
       $scope.hacking = true;
       var val = caption.substr(0, captionLength++);
       inputElem.value = val;
-      inputElem.focus();
 
       Suggest(val);
 
