@@ -12,23 +12,23 @@ $(document).ready(function() {
       $($(this).attr('href')).scrollView();
   });
 
-  // var mobileNav = $("#mobile-nav");
+  var mobileNav = $("#mobile-nav");
 
-  // $(".lines-button").click(function(){
-  //   if($(this).hasClass("close")) {
-  //     mobileNav.slideUp( "fast", function() {
-  //         // Animation complete.
-  //         $(this).css("display","none");
-  //       });
-  //     $(this).removeClass("close");
-  //   } else {
-  //     mobileNav.slideDown( "fast", function() {
-  //         // Animation complete.
-  //         $(this).css("display","block");
-  //       });
-  //     $(this).addClass("close");
-  //   }
-  // });
+  $(".lines-button").click(function(){
+    if($(this).hasClass("close")) {
+      mobileNav.slideUp( "fast", function() {
+          // Animation complete.
+          $(this).css("display","none");
+        });
+      $(this).removeClass("close");
+    } else {
+      mobileNav.slideDown( "fast", function() {
+          // Animation complete.
+          $(this).css("display","block");
+        });
+      $(this).addClass("close");
+    }
+  });
 
   //Form validation
   $("#contactForm").validate({
