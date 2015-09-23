@@ -135,7 +135,7 @@ b {
 .container:after, .row:after, .center:after, .autosuggest-item:after {
   content: "";
   display: table;
-  clear: both; 
+  clear: both;
 }
 
 /* Utility
@@ -202,9 +202,9 @@ b {
     width: 100%;
   }
 
-  @button-size : 3.5rem; 
+  @button-size : 3.5rem;
   @transition: .3s; // increase this to see the transformations in slow-motion
-   
+
   .lines-button {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -225,11 +225,11 @@ b {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* prevent tap highlight color / shadow */
-   
+
     &:hover {
       opacity: 1;
     }
-   
+
     &:active {
       transition: 0;
       background: rgba(0,0,0,.1);
@@ -242,18 +242,18 @@ b {
     width: @button-size;
     height: @button-size/7;
     background: @link-blue;
-    border-radius: @button-size/14; 
+    border-radius: @button-size/14;
     transition: @transition;
   }
 
   .lines {
     //create middle line
     .mixin-line;
-    position: relative; 
-   
+    position: relative;
+
     /*create the upper and lower lines as pseudo-elements of the middle line*/
     &:before, &:after {
-     
+
      .mixin-line;
       position: absolute;
       left:0;
@@ -264,7 +264,7 @@ b {
     &:after { top: -@button-size/4; }
   }
 
-  .lines-button.close .lines{ 
+  .lines-button.close .lines{
     /*hide the middle line*/
     background: transparent;
 
@@ -274,17 +274,17 @@ b {
       top: 0;
       width: @button-size;
     }
-  
+
     // rotate the lines to form the x shape
     &:before{
-      -ms-transform: rotate3d(0,0,1,45deg); 
-      -webkit-transform: rotate3d(0,0,1,45deg); 
-      transform: rotate3d(0,0,1,45deg); 
+      -ms-transform: rotate3d(0,0,1,45deg);
+      -webkit-transform: rotate3d(0,0,1,45deg);
+      transform: rotate3d(0,0,1,45deg);
     }
     &:after{
-      -ms-transform: rotate3d(0,0,1,-45deg); 
-      -webkit-transform: rotate3d(0,0,1,-45deg); 
-      transform: rotate3d(0,0,1,-45deg); 
+      -ms-transform: rotate3d(0,0,1,-45deg);
+      -webkit-transform: rotate3d(0,0,1,-45deg);
+      transform: rotate3d(0,0,1,-45deg);
     }
   }
 
@@ -326,7 +326,7 @@ b {
 
     .cta-container a:first-of-type {
       margin-bottom: 40px;
-    } 
+    }
   }
 
   .partner-container {
@@ -481,7 +481,7 @@ b {
 
     .cta-container a:first-of-type {
       margin-bottom: 40px;
-    } 
+    }
   }
 
   .partner-container {
@@ -639,7 +639,7 @@ b {
   .mobile-nav-container {
     display: none;
   }
-  
+
   #page-header {
     .cta-container {
       width: 65%;
@@ -918,8 +918,8 @@ b {
           color: #fff;
           line-height: 47px;
           font-size: 2.0rem;
-        } 
-      }  
+        }
+      }
     }
   }
 }
@@ -1100,7 +1100,7 @@ b {
           left: 520px;
           color: #ec5e67;
         }
-      } 
+      }
     }
   }
 }
@@ -1228,7 +1228,7 @@ b {
 }
 
 #page-header {
-  
+
   .container {
     padding: 75px 0;
   }
@@ -1299,7 +1299,7 @@ b {
     width: 100%;
     margin: 0 auto 40px auto;
   }
-  
+
   p {
     font-size: 1.6rem;
     max-width: 960px;
@@ -1386,7 +1386,7 @@ b {
 
 #team {
   background-color: @section-background;
-  
+
   .container {
     padding: 75px 0;
     background-repeat: no-repeat;

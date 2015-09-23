@@ -374,34 +374,12 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .autocomplete-results,
 .try-out,
-.autosuggest-container .full,
+.autosuggest-container div,
 .synonyms {
   display: none;
 }
 .autosuggest-mobile img {
-  width: 90%;
-}
-.form-field {
-  width: 88%;
-  position: relative;
-}
-.form-field > label {
-  position: absolute;
-  top: 20px;
-  left: 25px;
-  color: #428bca;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.form-field .label-default {
-  color: #afafaf;
-  opacity: 0;
-}
-.form-field .typing + label {
-  top: 12px;
-  color: #03a9f4;
-  opacity: 1;
+  width: 92%;
 }
 .login-app {
   display: block;
