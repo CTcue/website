@@ -51,28 +51,26 @@ $(document).ready(function() {
     },
 
     submitHandler: function(form) {
-      var url = "sendForm.php"; // the script where you handle the form input.
-
+      var url = "http://ctcue.com/api/contact";
       $.ajax({
          type: "POST",
          url: url,
          data: $("#contactForm").serialize(), // serializes the form's elements.
-         success: function(data)
-         {
-           console.log(data); // show response from the php script.
-           $("#contactForm").find("input[type=text], textarea").val("");
-           $("#contactForm .button").slideUp( 300, function() {});
-           $(".success").slideDown( 300, function() {
-            setTimeout(function(){
-              $(".success").slideUp( 300, function() {});
-              $("#contactForm .button").slideDown( 300, function() {});
-            }, 5000);
-           });
+         success: function(data) {
+             if (data === true || data === "true") {
+                 $("#contactForm").find("input[type=text], textarea").val("");
+                 $("#contactForm .button").slideUp( 300, function() {});
+                 $(".success").slideDown( 300, function() {
+                    setTimeout(function(){
+                      $(".success").slideUp( 300, function() {});
+                      $("#contactForm .button").slideDown( 300, function() {});
+                    }, 5000);
+                 });
+             }
          }
        });
 
       return false; // avoid to execute the actual submit of the form.
-
     },
 
     invalidHandler: function(event, validator) {
