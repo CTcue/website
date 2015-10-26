@@ -642,7 +642,7 @@ b {
     font-size: 1.6rem;
     color: #b0b0b0;
     text-decoration: none;
-    margin-right: 60px;
+    margin-right: 35px;
     line-height: 65px;
     -webkit-transition: color 0.5s ease;
     -moz-transition: color 0.5s ease;
@@ -910,9 +910,6 @@ b {
   .partner-container {
     width: 25%;
   }
-  #team .container {
-    background-image: url('../img/team-background.png');
-  }
   #team .vertical-align {
     display: table;
     overflow: hidden;
@@ -993,12 +990,6 @@ b {
   #contact form .contact-field label.error {
     left: 520px;
     color: #ec5e67;
-  }
-}
-@media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  #team .container {
-    background-image: url("../img/team-background@2x.png");
-    background-size: 560px auto;
   }
 }
 /* Larger than Desktop HD */
@@ -1231,13 +1222,34 @@ b {
 #partners .partner-container a {
   outline: none;
 }
-#team {
+#compliance {
   background-color: #e8ebf0;
+  text-align: center;
+}
+#compliance .container {
+  padding: 75px 0;
+  background-image: url('../img/compliance-background.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  #compliance .container {
+    background-image: url("../img/compliance-background@2x.png");
+    background-size: 345px auto;
+  }
+}
+#compliance h1 {
+  font-size: 4.0rem;
+  margin-bottom: 40px;
+}
+#compliance p {
+  font-size: 1.6rem;
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 40px;
 }
 #team .container {
   padding: 75px 0;
-  background-repeat: no-repeat;
-  background-position: left bottom;
 }
 #contact {
   text-align: center;
@@ -1251,6 +1263,9 @@ b {
     background-image: url("../img/footer-border@2x.png");
     background-size: 100% 10px;
   }
+}
+#contact .address {
+  margin-top: 40px;
 }
 /* Autocomplete
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
