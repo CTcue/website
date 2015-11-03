@@ -51,11 +51,21 @@ $(document).ready(function() {
     },
 
     submitHandler: function(form) {
-      var url = "http://ctcue.com/api/contact";
+      var formData = {
+        "name": $("input[name='name']").val(),
+        "email": $("input[name='email']").val(),
+        "phone": $("input[name='phone']").val(),
+        "message": $("textarea[name='message']").val()
+      }
+
+      var url = "http://app.ctcue.com/api/contact";
+
       $.ajax({
          type: "POST",
+         contentType: 'application/json',
+         processData: false,
          url: url,
-         data: $("#contactForm").serialize(), // serializes the form's elements.
+         data: JSON.stringify(formData),
          success: function(data) {
              if (data === true || data === "true") {
                  $("#contactForm").find("input[type=text], textarea").val("");
