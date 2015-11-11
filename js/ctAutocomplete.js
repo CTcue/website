@@ -29,7 +29,7 @@ app.directive('typing', function ($timeout, $window) {
 });
 
 app.controller('ctAutocomplete', function ($scope, $http, $location) {
-  var URL = "http://178.62.230.23";
+  var URL = "https://ctcue.com/umls";
 
   // For autocompletion suggestions
   $scope.__selected = "";
@@ -79,10 +79,8 @@ app.controller('ctAutocomplete', function ($scope, $http, $location) {
     $scope.selectedTerm = item.str;
     // Add autocomplete terms
     $http.post(URL + "/expand", { 'query' : item.cui })
-      .success(function(terms) {
-        terms = terms.filter(function(e){ return e; });
-
-        $scope.synonymsList = terms;
+      .success(function(result) {
+        $scope.synonymsList = result.terms.filter(function(e){ return e; });
       });
   };
 
