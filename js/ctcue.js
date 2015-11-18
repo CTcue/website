@@ -58,7 +58,7 @@ $(document).ready(function() {
         "message": $("textarea[name='message']").val()
       }
 
-      var url = "http://app.ctcue.com/api/contact";
+      var url = "https://app.ctcue.com/api/contact";
 
       $.ajax({
          type: "POST",
