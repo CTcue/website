@@ -12,6 +12,10 @@ $(document).ready(function() {
       $($(this).attr('href')).scrollView();
   });
 
+  $(".hiring").click(function() {
+      $($(this).attr('href')).scrollView();
+  });
+
   var mobileNav = $("#mobile-nav");
 
   $(".lines-button").click(function(){
