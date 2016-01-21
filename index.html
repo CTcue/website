@@ -11,7 +11,7 @@
 
     <title>CTcue</title>
 
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!--[if lt IE 9]>
       <link rel="stylesheet" href="css/ie8.min.css">
@@ -32,10 +32,10 @@
         <a href="#team" class="login-app hiring">We're Hiring!</a>
 
         <div id="nav-bar">
-          <a href="#about">CTcue</a>
-          <a href="#vision">Vision</a>
-          <a href="#partners">Partners</a>
+          <a href="#ehr">EHR</a>
+          <a href="#ctcue">CTcue</a>
           <a href="#compliance">Compliance</a>
+          <a href="#early-adopters">Early adopters</a>
           <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </div>
@@ -48,10 +48,10 @@
       </div>
 
       <div id="mobile-nav">
-        <a href="#about">CTcue</a>
-        <a href="#vision">Vision</a>
-        <a href="#partners">Partners</a>
+        <a href="#ehr">EHR</a>
+        <a href="#ctcue">CTcue</a>
         <a href="#compliance">Compliance</a>
+        <a href="#early-adopters">Early adopters</a>
         <a href="#team">Team - We're hiring!</a>
         <a href="#contact">Contact</a>
       </div>
@@ -60,206 +60,54 @@
     <div id="page-header">
       <div class="container">
         <div class="half pull-left">
-          <h1>Finding the right patients instantly</h1>
+          <h1>We make EHR data accesible and useful</h1>
 
-          <p class="lead">CTcue makes searching through Electronic Health Records, including text like notes, reports, and referral letters, a breeze.</p>
+          <p class="lead">Electronic Health Records are a one-way street – clinicians put data in, but they can not retrieve any information from these records.</p>
 
           <div class="cta-container">
-            <a href="#about" class="button pull-left">Learn more</a>
-            <a href="https://ctcue.com/app/#/" class="link">Login</a>
+            <a href="https://ctcue.com/app/#/" class="button pull-left">Get access</a>
+            <a href="#ehr" class="link">Learn more</a>
           </div>
         </div>
 
-        <div class="half pull-right">
-            <iframe width="100%" height="310" src="https://www.youtube.com/embed/PbJbrP9sUFM?modestbranding=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <div class="half pull-right app-impressions">
+          <img src="img/screen-bg.png" class="slider-container" alt="Slideshow background">
+          <div>
+            <img src="img/app-impression-1.png" alt="CTcue synonym browser">
+          </div>
+          <div>
+            <img src="img/app-impression-2.png" alt="CTcue result page">
+          </div>
+          <div>
+            <img src="img/app-impression-3.png" alt="CTcue patient validation">
+          </div>
+          <div>
+            <img src="img/app-impression-4.png" alt="CTcue criteria breakdown">
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="about">
+    <div id="ehr">
       <div class="container">
-        <h1>All it takes is your enthusiasm, we take care of the rest</h1>
+        <h1>“The current EHR's are not designed to ensure the data can be stored unambiguously, and as a result extracted..."</h1>
 
-        <p>Introducing technical innovation in hospitals can be a challenge, we know. But we have done this so often that we know who to talk to and when. Even before implementation, we will be with you during talks and we will handle all the technical meetings. Next to technology we are fast becoming experts on medical data privacy laws. The CTcue platform searches on anonymized patient data and runs exclusively within the hospital's environment. Patient data will always be save.</p>
+        <small>Translated from “Registratie aan de bron” The Netherlands Federation of University Medical Centres (NFU April 2013)</small>
+
+        <p>Searching in electronic health records remains a major hurdle. Since most valuable patient information is archived as text (clinical notes, transfer notes, multidisciplinary meeting notes, discharge letters, etc.) into the Electronic Health Records (EHR), it is not possible to automatically search these criteria. Manual search through unstructured patient records is very time consuming. Based on the latest innovations in information retrieval, natural language processing and machine learning, CTcue enables clinicians to use valuable data from their EHR with user-friendly interfaces.</p>
       </div>
     </div>
 
-    <div id="autosuggest" ng-app="ctSite">
-      <div class="container" ng-controller="ctAutocomplete">
+    <div id="ctcue">
+      <div class="container">
         <div class="half pull-left">
-          <div class="autosuggest-container">
-            <div class="form-field">
-                <input
-                  id="apiInput"
-                  type='text'
-                  autocomplete='off'
-                  placeholder='Search through our knowledge base'
-                  ng-model='__selected'
-                  typing='APIsuggestions(__selected, item.name)'
-                  ng-class='{ "typing" : __selected.length > 1 || hacking, "no-searchterm" : __selected.length == 0 }'>
+          <h1>CTcue</h1>
 
-                <label ng-show="__selected.length > 1 || hacking" for="apiInput" class="label-default">
-                  Search through our knowledge base
-                </label>
-            </div>
-
-            <div class='full' ng-if='__noResult'>
-                <h4>No results found for <b>{{ __selected }}</b>.</h4>
-            </div>
-
-            <div class="full autocomplete-results" ng-if='__hits.length'>
-              <h4>Results for <b>{{ __selected }}</b> found in {{ __took }}ms</h4>
-
-              <ul class='simple'>
-                <li class='autosuggest-item'
-                  ng-repeat="obj in __hits | limitTo: 5" ng-click='onSelect(obj, "name")'>
-                  <span class="pull-left">{{ obj.str }}</span>
-                  <span class="synonyms-link">Show synonyms</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="autosuggest-mobile">
-            <img src="img/ct-autosuggest.gif" alt="CTcue autosuggest" data-no-retina>
-          </div>
+          <p>Lorem ipsum dolor sit amet, commune forensibus definitiones mea ne. Elitr splendide signiferumque pro ne, sint nibh no pro. Sed id epicurei delectus persequeris. Eos et erat dictas, legere molestie cu est. Cu mel suas suscipit, et vitae utroque qualisque sit, cu abhorreant definitiones eos. Te partem regione omnesque pri, ea nec elitr praesent. Cu mel suas suscipit, et vitae utroque qualisque sit.</p>
         </div>
 
         <div class="half pull-right">
-          <div class="synonyms-container" ng-class="{ 'show-text' : showText }">
-            <div class="autosuggest-text" ng-if="showText">
-              <div>
-                <div class="try-out">
-                  <h1>Try out our knowledgebase for medical terms and synonyms</h1>
-
-                  <p>This is how we enrich your query to make your searches more reliable so you get the best results.</p>
-                </div>
-
-                <div class="mobile-knowledgebase">
-                  <h1>Our knowledgebase for medical terms and synonyms</h1>
-
-                  <p>This is how we enrich your query to make your searches more reliable so you get the best results. To try it out visit our website on your tablet or laptop.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="synonyms" ng-if="synonymsList.length > 0">
-              <h2>{{ selectedTerm }}<span>{{ synonymsList.length }} synonyms</span></h2>
-              <ul class="synonym-list">
-                <li ng-repeat="synonym in synonymsList | limitTo:10">
-                  {{ synonym }}
-                </li>
-              </ul>
-
-              <p ng-if="synonymsList.length > 10" class="other-synonyms">And {{ synonymsList.length - 10 }} other synonyms</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="vision">
-      <div class="container">
-        <h1>Bringing cutting edge innovation to healthcare</h1>
-
-        <p>Perplexed by the discovery that clinicians can not easily search through their patient data we made it our mission to facilitate this. We bring the latest in information retrieval, natural language processing and machine learning to enable you to get the most value out of your Electronic Health Records. We wrap this in very user friendly interfaces so clinicians can use it without having to be an SQL database administrator on the side.</p>
-      </div>
-    </div>
-
-    <div id="partners">
-      <div class="container">
-        <h1>Partners</h1>
-
-        <div class="row">
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.umcutrecht.nl/nl/" target="_blank">
-              <img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.spaarnegasthuis.nl/" target="_blank">
-              <img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.isala.nl/" target="_blank">
-              <img src="img/partners/Isala.png" alt="Isala">
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.diakonessenhuis.nl/Pub" target="_blank">
-              <img src="img/partners/Diakonessenhuis.png" alt="Diakonessenhuis">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="https://www.lumc.nl/" target="_blank">
-              <img src="img/partners/LUMC.png" alt="Leids Universitair Medisch Centrum">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.janssennederland.nl/" target="_blank">
-              <img src="img/partners/Janssen.png" alt="Janssen Pharmaceuticals">
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.quintiles.com/nl-nl/locations/netherlands" target="_blank">
-              <img src="img/partners/Quintiles.png" alt="Quintiles">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.sanofi.nl/l/nl/nl/index.jsp" target="_blank">
-              <img src="img/partners/Sanofi.png" alt="Sanofi">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.amgen.nl/dutch/index.html#" target="_blank">
-              <img src="img/partners/Amgen.png" alt="Amgen">
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.gsk.com/" target="_blank">
-              <img src="img/partners/GSK.png" alt="GlaxoSmithKline">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.ey.com/NL/nl/Home" target="_blank">
-              <img src="img/partners/EY.png" alt="EY">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <span class="helper"></span>
-            <a href="http://www.hvglaw.nl/" target="_blank">
-              <img src="img/partners/HVG.png" alt="HVG">
-            </a>
-          </div>
+          <iframe width="100%" height="310" src="https://www.youtube.com/embed/PbJbrP9sUFM?modestbranding=1&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
@@ -268,7 +116,63 @@
       <div class="container">
         <h1>Compliance</h1>
 
-        <p>Before adding the EHR retrieved data to the CTcue search engine all data including text data (decursus, letters et cetera) will be pseudonymised by CTcue. Hence the actual search process is on pseudonymised data only. The CTcue compliance process is validated by EY’s law experts.</p>
+        <p>Our application is developed based on “privacy by design”. Before entering patient data in our search engine, We pseudonymize all data including documents, decursus, reports, et cetera. So our application offers a search on premise on non-identifiable data, which allows different hospital employees to browse the EHR data. Today many employees work with the EHR to help search for patients manually, which violates the privacy act (Dutch Wbp).</p>
+
+        <p>EY’s HvG specialized privacy attorneys validated our process, especially with respect to the 2016 legislation about the Bill on Notification of data leaks (“meldplicht data lekken”).</p>
+
+        <!--<p>Before adding the EHR retrieved data to the CTcue search engine all data including text data (decursus, letters et cetera) will be pseudonymised by CTcue. Hence the actual search process is on pseudonymised data only. The CTcue compliance process is validated by EY’s law experts. </p> -->
+      </div>
+    </div>
+
+    <div id="early-adopters">
+      <div class="container">
+        <h1>Early adopters</h1>
+
+        <p>The proof of the pudding is in the eating. The following hospitals were the Braveheart’s who dared to start with us.</p>
+
+        <div class="row">
+          <div class="partner-container">
+            <a href="http://www.umcutrecht.nl/nl/" target="_blank">
+              <img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
+            </a>
+
+            <p>UMCU helped us to develop a proof of principle and become our innovation partner. The unlocked data came from the research data platform which extracts data from Chipsoft EZIS</p>
+          </div>
+
+          <div class="partner-container">
+            <a href="http://www.spaarnegasthuis.nl/" target="_blank">
+              <img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
+            </a>
+
+            <p>Unlocking the EHR Epic data, we help researchers and doctors in Spaarne Gasthuis search for eligible patients and quality criteria.</p>
+          </div>
+
+          <div class="partner-container">
+            <a href="http://www.isala.nl/" target="_blank">
+              <img src="img/partners/Isala.png" alt="Isala">
+            </a>
+
+            <p>Having its own homebrew EHR Eridanos we let researchers and docters at Isala search through all their patient data</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="partner-container">
+            <a href="https://www.lumc.nl/" target="_blank">
+              <img src="img/partners/LUMC.png" alt="Leids Universitair Medisch Centrum">
+            </a>
+
+            <p>LUMC became innovation partner and allows us to browse through the Medical Information data which is extracted from Chipsofts Ezis.</p>
+          </div>
+
+          <div class="partner-container">
+            <a href="http://www.diakonessenhuis.nl/Pub" target="_blank">
+              <img src="img/partners/Diakonessenhuis.png" alt="Diakonessenhuis">
+            </a>
+
+            <p>The Chipsoft EZIS EHR data at Diakonessenhuis is used as input for our search engine and lets researchers and doctors search through their data.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -308,14 +212,6 @@
               <h2>Nick Visser</h2>
 
               <p>UX Designer</p>
-            </div>
-
-            <div class="team-member">
-              <img src="img/team/mike-van-rossum.png" alt="Mike van Rossum">
-
-              <h2>Mike van Rossum</h2>
-
-              <p>Full Stack Developer</p>
             </div>
 
             <div class="team-member">
@@ -359,7 +255,11 @@
 
     <div id="contact">
       <div class="container">
-        <h1>Do you want to know more? CTcue is also starting pilots. If you are interested please contact us!</h1>
+        <h1>The use of CTcue to find patients for studies is <b>free</b>.</h1>
+
+        <p>A license fee is applicable if CTcue is used to free search on all data, e.g finding quality indicators.</p> 
+
+        <p>If you want to participate in a free trial please let us know.</p>
 
         <form method="post" action="" id="contactForm">
           <div class="contact-field">
@@ -391,7 +291,7 @@
         </a>
 
         <div class="full">
-          <div>
+          <div class="address">
             <p>CTcue B.V.</p>
             <p>Science Park 402 1098 XH</p>
             <p>Amsterdam</p>
@@ -415,16 +315,10 @@
     <![endif]-->
 
     <!--[if gte IE 9]>
-      <script src="js/angular.min.js"></script>
-      <script src="js/angular-animate.min.js"></script>
-      <script src="js/ctAutocomplete.js"></script>
       <script src="js/jquery-2.1.4.min.js"></script>
     <![endif]-->
 
     <![if !IE]>
-      <script src="js/angular.min.js"></script>
-      <script src="js/angular-animate.min.js"></script>
-      <script src="js/ctAutocomplete.js"></script>
       <script src="js/jquery-2.1.4.min.js"></script>
     <![endif]>
 

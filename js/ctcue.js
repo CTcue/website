@@ -4,7 +4,7 @@ $(document).ready(function() {
       $($(this).attr('href')).scrollView();
   });
 
-  $("#page-header .button").click(function() {
+  $("#page-header a").click(function() {
       $($(this).attr('href')).scrollView();
   });
 
@@ -33,6 +33,18 @@ $(document).ready(function() {
       $(this).addClass("close");
     }
   });
+
+  //Slideshow
+  $(".app-impressions > div:gt(0)").hide();
+
+  setInterval(function() { 
+    $('.app-impressions > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('.app-impressions');
+  },  4000);
 
   //Form validation
   $("#contactForm").validate({
