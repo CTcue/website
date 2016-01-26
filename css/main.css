@@ -402,6 +402,9 @@ b {
   .partner-container {
     width: 100%;
   }
+  #ctcue iframe {
+    margin-top: 5%;
+  }
   #team .vertical-align {
     text-align: center;
   }
@@ -891,6 +894,9 @@ b {
     max-width: 100%;
     height: auto;
   }
+  #ctcue iframe {
+    margin-top: 25%;
+  }
   #page-header {
     text-align: left;
   }
@@ -1028,6 +1034,9 @@ b {
     font-size: 6.0rem;
     margin-top: 10px;
   }
+  #ctcue iframe {
+    margin-top: 15%;
+  }
   #team .team-member {
     float: left;
     margin-right: 40px;
@@ -1123,6 +1132,12 @@ b {
 #page-header p {
   font-size: 1.8rem;
   margin-top: 30px;
+}
+#page-header p:last-of-type {
+  margin-top: 0;
+}
+#page-header p b {
+  color: #004e72;
 }
 #page-header .cta-container {
   line-height: 55px;
