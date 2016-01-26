@@ -230,6 +230,15 @@ b {
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (min-width: 320px) {
+  .app-impressions div {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+  }
+  .app-impressions div img {
+    width: 93%;
+    height: 93%;
+  }
   .container {
     max-width: 300px;
     padding: 0 10px;
@@ -393,6 +402,9 @@ b {
   .partner-container {
     width: 100%;
   }
+  #ctcue iframe {
+    margin-top: 5%;
+  }
   #team .vertical-align {
     text-align: center;
   }
@@ -439,25 +451,6 @@ b {
   #team .team-member:nth-child(n+4) {
     margin-bottom: 0;
   }
-  #autosuggest .autosuggest-container {
-    display: none;
-  }
-  #autosuggest .autosuggest-mobile {
-    display: block;
-    margin-bottom: 40px;
-  }
-  #autosuggest .autosuggest-text {
-    text-align: left;
-  }
-  #autosuggest .autosuggest-text h1 {
-    margin-bottom: 40px;
-  }
-  #autosuggest .mobile-knowledgebase {
-    display: block;
-  }
-  #autosuggest .try-out {
-    display: none;
-  }
   #contact h1 {
     font-size: 2.5rem;
     width: 100%;
@@ -468,6 +461,12 @@ b {
   }
   #contact .full {
     margin: 40px 0 40px 0;
+  }
+  #contact p:last-of-type {
+    padding-bottom: 75px;
+  }
+  #contact .address p:last-of-type {
+    padding: 0;
   }
   #contact form {
     display: none;
@@ -485,6 +484,15 @@ b {
 }
 /* Larger than mobile */
 @media (min-width: 400px) {
+  .app-impressions div {
+    position: absolute;
+    top: 8px;
+    left: 0px;
+  }
+  .app-impressions div img {
+    width: 93%;
+    height: 93%;
+  }
   .container {
     max-width: 360px;
     padding: 0 20px;
@@ -563,25 +571,19 @@ b {
   #team .team-member:nth-child(n+4) {
     margin-bottom: 0;
   }
-  #autosuggest .autosuggest-container {
-    display: none;
-  }
-  #autosuggest .autosuggest-mobile {
-    display: block;
-  }
-  #autosuggest .autosuggest-text {
-    text-align: left;
-  }
-  #autosuggest .synonyms-container.show-text {
-    height: 307px;
-  }
   #contact h1 {
     font-size: 2.5rem;
     width: 95%;
     margin: 0 auto;
-    padding: 75px 0;
+    padding: 75px 0 20px 0;
     line-height: 70px;
     color: #004e72;
+  }
+  #contact p:last-of-type {
+    padding-bottom: 75px;
+  }
+  #contact .address p:last-of-type {
+    padding: 0;
   }
   #contact .success {
     display: none;
@@ -594,6 +596,15 @@ b {
 }
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  .app-impressions div {
+    position: absolute;
+    top: 13px;
+    left: 0px;
+  }
+  .app-impressions div img {
+    width: 93%;
+    height: 93%;
+  }
   .container {
     max-width: 510px;
     padding: 0 20px;
@@ -622,12 +633,19 @@ b {
     display: block;
     margin: 0 40px 0 0;
   }
-  #autosuggest .synonyms-container.show-text {
-    height: 234px;
-  }
 }
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .app-impressions div {
+    position: absolute;
+    top: 14px;
+    left: 97px;
+  }
+  .app-impressions div img {
+    width: 100%;
+    height: 100%;
+    max-width: 530px;
+  }
   .mobile-nav-container {
     display: block;
   }
@@ -638,7 +656,7 @@ b {
   }
   #nav-bar {
     display: none;
-    width: 560px;
+    width: 590px;
     margin: 0 auto;
     text-align: center;
   }
@@ -676,28 +694,6 @@ b {
   }
   .partner-container {
     width: 32%;
-  }
-  #autosuggest .autosuggest-container {
-    display: block;
-  }
-  #autosuggest .autosuggest-mobile {
-    display: none;
-  }
-  #autosuggest .autosuggest-text {
-    text-align: left;
-  }
-  #autosuggest .vertical-align {
-    display: block;
-    height: auto;
-  }
-  #autosuggest .synonyms-container.show-text {
-    height: 186px;
-  }
-  #autosuggest .try-out {
-    display: block;
-  }
-  #autosuggest .mobile-knowledgebase {
-    display: none;
   }
   #vision .container {
     background-position: right center;
@@ -787,6 +783,11 @@ b {
   }
   #contact .full {
     margin: 75px 0 40px 0;
+    text-align: center;
+  }
+  #contact .full p {
+    padding: 0;
+    margin-right: 40px;
   }
   #contact .get-in-touch {
     display: none;
@@ -860,11 +861,20 @@ b {
 }
 /* Larger than desktop */
 @media (min-width: 1000px) {
+  .app-impressions div {
+    position: absolute;
+    top: 12px;
+    left: 17px;
+  }
+  .app-impressions div img {
+    width: 96%;
+    height: 96%;
+  }
   .login-app {
     display: block;
   }
   .hiring {
-    margin-right: 45px;
+    margin-right: 25px;
   }
   .mobile-nav-container {
     display: none;
@@ -884,6 +894,9 @@ b {
     max-width: 100%;
     height: auto;
   }
+  #ctcue iframe {
+    margin-top: 25%;
+  }
   #page-header {
     text-align: left;
   }
@@ -897,31 +910,11 @@ b {
     width: 100%;
     height: 55px;
   }
-  #autosuggest .autosuggest-text {
-    text-align: right;
-    display: table;
-    overflow: hidden;
-    height: 355px;
-  }
-  #autosuggest .autosuggest-text div {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-  }
-  #autosuggest .synonyms-container.show-text {
-    height: 355px;
-  }
-  #autosuggest .try-out {
-    display: block;
-  }
-  #autosuggest .mobile-knowledgebase {
-    display: none !important;
-  }
-  #partners .half {
+  #early-adopters .half {
     width: 100% !important;
   }
   .partner-container {
-    width: 25%;
+    width: 33%;
   }
   #team .vertical-align {
     display: table;
@@ -1001,7 +994,6 @@ b {
   }
   #contact p {
     font-size: 2.0rem;
-    margin-right: 40px;
   }
   #contact form .contact-field label.error {
     left: 520px;
@@ -1010,6 +1002,15 @@ b {
 }
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
+  .app-impressions div {
+    position: absolute;
+    top: 14px;
+    left: 22px;
+  }
+  .app-impressions div img {
+    width: 100%;
+    height: 100%;
+  }
   .hiring {
     margin-right: 90px;
   }
@@ -1030,7 +1031,11 @@ b {
     width: 100%;
   }
   #page-header h1 {
-    font-size: 5.6rem;
+    font-size: 6.0rem;
+    margin-top: 10px;
+  }
+  #ctcue iframe {
+    margin-top: 15%;
   }
   #team .team-member {
     float: left;
@@ -1125,12 +1130,30 @@ b {
   padding: 75px 0;
 }
 #page-header p {
-  font-size: 2.0rem;
-  margin-top: 40px;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+#page-header p:last-of-type {
+  margin-top: 0;
+}
+#page-header p b {
+  color: #004e72;
 }
 #page-header .cta-container {
   line-height: 55px;
   margin-top: 40px;
+}
+#page-header .app-impressions {
+  position: relative;
+}
+#page-header .app-impressions .slider-container {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+#page-header .app-impressions div {
+  z-index: 3;
 }
 .button {
   width: 252px;
@@ -1167,51 +1190,54 @@ b {
 .link:hover {
   color: #03a9f4;
 }
-#about {
+#ehr {
   background-color: #e8ebf0;
   text-align: center;
 }
-#about .container {
+#ehr .container {
   background-image: url('../img/about-background.png');
   background-repeat: no-repeat;
   background-position: left center;
   padding: 75px 0;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  #about .container {
+  #ehr .container {
     background-image: url("../img/about-background@2x.png");
     background-size: 360px auto;
   }
 }
-#about h1 {
+#ehr h1 {
   font-size: 4.0rem;
   width: 100%;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 10px auto;
 }
-#about p {
+#ehr small {
+  display: block;
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+#ehr p {
   font-size: 1.6rem;
   max-width: 960px;
   margin: 0 auto;
   line-height: 40px;
+  text-align: left;
 }
-#autosuggest {
+#ctcue .container {
   padding: 75px 0;
 }
-#autosuggest .half.pull-right h2 {
-  font-size: 2.0rem;
-  color: #004e72;
-  text-transform: capitalize;
-  margin-bottom: 15px;
+#ctcue h1 {
+  font-size: 4.0rem;
+  width: 100%;
+  margin: 0 auto 40px auto;
 }
-#autosuggest .half.pull-right h2 span {
-  font-size: 1.4rem;
-  color: #aaa;
-  margin-left: 15px;
-}
-#autosuggest .other-synonyms {
-  float: left;
-  margin-top: 15px;
-  color: #004e72;
+#ctcue p {
+  font-size: 1.6rem;
+  max-width: 960px;
+  margin: 0 auto 20px auto;
+  line-height: 40px;
+  text-align: left;
 }
 #vision {
   text-align: center;
@@ -1231,30 +1257,43 @@ b {
   margin: 0 auto;
   line-height: 40px;
 }
-#partners {
+#early-adopters {
   padding: 75px 0;
-  text-align: center;
+  text-align: left;
 }
-#partners h1 {
+#early-adopters h1 {
   font-size: 5.0rem;
   margin-bottom: 40px;
+  text-align: center;
 }
-#partners .partner-container {
-  display: inline-block;
-  height: 110px;
+#early-adopters p:first-of-type {
+  text-align: center;
   margin-bottom: 40px;
 }
-#partners .partner-container .helper {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+#early-adopters .row {
+  width: 100%;
+  text-align: center;
 }
-#partners .partner-container img {
+#early-adopters .partner-container {
+  display: inline-block;
+  margin: 0 auto;
+  float: none;
+  vertical-align: top;
+}
+#early-adopters .partner-container img {
+  display: inline-block;
   margin: 0 auto;
   vertical-align: middle;
 }
-#partners .partner-container a {
+#early-adopters .partner-container a {
   outline: none;
+  display: block;
+  text-align: center;
+  line-height: 65px;
+}
+#early-adopters .partner-container p {
+  padding: 10px 20px 0 20px;
+  text-align: justify;
 }
 #compliance {
   background-color: #e8ebf0;
@@ -1279,8 +1318,12 @@ b {
 #compliance p {
   font-size: 1.6rem;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   line-height: 40px;
+  text-align: left;
+}
+#team {
+  background: #e8ebf0;
 }
 #team .container {
   padding: 75px 0;
@@ -1310,7 +1353,7 @@ b {
 }
 #team .jobs .job-listing li small {
   font-size: 1.5rem;
-  color: #999;
+  color: #3e3e3e;
 }
 #contact {
   text-align: center;
@@ -1326,7 +1369,7 @@ b {
   }
 }
 #contact .address {
-  margin-top: 40px;
+  margin: 40px 0 20px 0;
 }
 #vacancy .container {
   padding-bottom: 40px;
@@ -1357,35 +1400,6 @@ b {
 }
 /* Autocomplete
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.autocomplete-results {
-  margin-top: 12px;
-  background: #fff;
-  padding-top: 14px;
-  padding-bottom: 0px;
-}
-.autocomplete-results h4 {
-  font-size: 1.3rem;
-  color: #aaa;
-  margin-bottom: 5px;
-}
-.autocomplete-results li {
-  padding: 10px 0;
-  text-transform: capitalize;
-  border-bottom: 1px solid #eee;
-  margin-left: -24px;
-  padding-left: 24px;
-}
-.autocomplete-results ul:hover {
-  cursor: pointer;
-}
-.autosuggest-item:hover {
-  background: #f2f2f2;
-}
-.synonyms-link {
-  float: right;
-  margin-right: 20px;
-  color: #03a9f4;
-}
 .form-field {
   position: relative;
 }
@@ -1410,44 +1424,8 @@ b {
   color: #03a9f4;
   opacity: 1;
 }
-.synonym-list {
-  float: left;
-  width: 100%;
-  list-style-type: disc;
-}
-.synonym-list li {
-  display: inline-block;
-  width: 45%;
-  padding: 10px 10px 10px 0;
-  float: left;
-  font-size: 1.6rem;
-}
 /* Animations
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.synonyms-container {
-  position: relative;
-  height: 355px;
-}
-.autosuggest-text {
-  position: absolute;
-}
-.autosuggest-text p {
-  font-size: 1.6rem;
-}
-.autosuggest-text.ng-leave {
-  animation: fadeOutUp 0.5s;
-}
-.synonyms {
-  position: absolute;
-  width: 100%;
-}
-.synonyms.ng-enter {
-  animation: fadeInDown 0.5s;
-}
-.synonyms.delay {
-  animation-delay: 0.5s;
-  animation-duration: 0;
-}
 @-webkit-keyframes fadeOutUp {
   0% {
     opacity: 1;
