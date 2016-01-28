@@ -1325,6 +1325,9 @@ b {
 #team {
   background: #e8ebf0;
 }
+#team .pull-right {
+  margin-top: 40px;
+}
 #team .container {
   padding: 75px 0;
 }
@@ -1381,6 +1384,7 @@ b {
 #vacancy ul {
   list-style-type: disc;
   margin-left: 30px;
+  margin-bottom: 20px;
 }
 #vacancy .keep-reading {
   font-weight: 500;
