@@ -697,17 +697,25 @@ b {
 }
 #blog .post-content {
   margin-bottom: 40px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 #blog .pagination {
-  margin-top: 40px;
+  margin: 40px auto 0 auto;
   color: #999;
   text-align: center;
+  max-width: 700px;
 }
 #blog .pagination .older-posts {
   float: right;
 }
 #blog .pagination .newer-posts {
   float: left;
+}
+#blog .post-header,
+#blog .post-excerpt {
+  max-width: 700px;
+  margin: 0 auto;
 }
 #blog #contact {
   margin-top: 40px;
@@ -717,8 +725,9 @@ b {
   margin-top: 20px;
 }
 #blog .post-footer {
-  float: left;
   width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   border-top: 1px solid #d3d3db;
 }
 #blog .post-footer .author {
