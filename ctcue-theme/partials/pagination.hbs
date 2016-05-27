@@ -1,0 +1,9 @@
+<nav class="pagination" role="navigation">
+    {{#if prev}}
+        <a class="newer-posts" href="{{page_url prev}}"><span aria-hidden="true">&larr;</span> Recentere berichten</a>
+    {{/if}}
+    <span class="page-number">Pagina {{page}} van {{pages}}</span>
+    {{#if next}}
+        <a class="older-posts" href="{{page_url next}}">Oudere berichten <span aria-hidden="true">&rarr;</span></a>
+    {{/if}}
+</nav>

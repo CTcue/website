@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}" />
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+
+    {{!-- The blog navigation links --}}
+    {{navigation}}
+
+    <div id="blog-banner">
+        <div class="overlay"></div>
+    </div>
+
+    <div id="blog">
+        <div class="container">
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+            {{{body}}}
+        </div>
+    </div>
+    
+    {{!-- The tiny footer at the very bottom --}}
+    <!-- <div id="contact">
+        <div class="full">
+          <div class="address">
+            <p>CTcue B.V.</p>
+            <p>Science Park 402 1098 XH</p>
+            <p>Amsterdam</p>
+            <p>info@ctcue.com</p>
+            <p>+31 (0) 85 600 1037</p>
+          </div>
+        </div>
+    </div> -->
+
+    
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{!-- The main JavaScript file for Casper --}}
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+</body>
+</html>
