@@ -1,8 +1,6 @@
-# Casper
+# CTcue theme
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
-
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
+A blog theme for [Ghost](http://github.com/tryghost/ghost/).
 
 ## Copyright & License
 
