@@ -1276,7 +1276,7 @@ b {
 }
 #early-adopters .partner-container {
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   float: none;
   vertical-align: top;
 }
