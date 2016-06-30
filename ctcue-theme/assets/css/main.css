@@ -677,6 +677,12 @@ b {
   margin-left: 30px;
   margin-bottom: 20px;
 }
+#blog strong {
+  font-weight: 500;
+}
+#blog em {
+  font-style: italic;
+}
 #blog .keep-reading {
   font-weight: 500;
   margin: 20px 0;
