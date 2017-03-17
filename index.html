@@ -1,398 +1,293 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find the right patients instantly. CTcue's fully compliant proces let's you search through all patient data including clinical notes, transfer notes, discharge letters et cetera.">
-    <meta name="author" content="CTcue">
-    <meta name="ROBOTS" content="index, follow">
-    <link rel="shortcut icon" href="favicon.ico">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find patients in an instant. Searching through medical records for patients matching specific criteria is a arduous and time-consuming process. Our intelligent search engine makes the information you need instantly available">
+        <meta name="author" content="CTcue">
+        <meta name="ROBOTS" content="index, follow">
+        <link rel="shortcut icon" href="favicon.ico">
 
-    <title>CTcue</title>
+        <title>CTcue</title>
 
-    <link rel="stylesheet" href="css/main.min.css">
+        <link rel="stylesheet" href="css/ctcue-main.min.css">
+    </head>
 
-    <!--[if lt IE 9]>
-      <link rel="stylesheet" href="css/ie8.min.css">
-    <![endif]-->
+    <body>
+        <header>
+            <div class="content-overlay"></div>
 
-    <!--[if IE 9]>
-      <link rel="stylesheet" href="css/ie9.min.css">
-    <![endif]-->
-  </head>
+            <div class="container">
+                <nav id="">
+                    <a href="/" class="logo">
+                        <img src="img/ctcue-logo.png" alt="CTcue">
+                        <p>CTcue</p>
+                    </a>
 
-  <body>
-    <div id="navigation">
-      <div class="container">
-        <img class="logo" src="img/logo.png" alt="CTcue" data-no-retina>
+                    <ul>
+                        <li>
+                            <a href="/about-us">About us</a>
+                        </li>
+                        <li>
+                            <a href="/jobs">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="https://blog.ctcue.com">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Get in touch</a>
+                        </li>
+                    </ul>
 
-        <a href="https://ctcue.com/app/#/" class="login-app">Login</a>
+                    <div class="mobile-nav-button">
+                      <button class="lines-button arrow arrow-left" type="button" role="button" aria-label="Toggle Navigation">
+                        <span class="lines"></span>
+                      </button>
+                    </div>
+                </nav>
 
-        <a href="#team" class="login-app hiring">We're Hiring!</a>
+                <nav id="mobile-nav">
+                    <a href="/about-us">About us</a>
+                    <a href="/jobs"">Jobs</a>
+                    <a href="https://blog.ctcue.com">Blog</a>
+                    <a href="/contact">Get in touch</a>
+                </nav>
 
-        <div id="nav-bar">
-          <a href="#ctcue">CTcue</a>
-          <a href="#compliance">Compliance</a>
-          <a href="#early-adopters">Early adopters</a>
-          <a href="#team">Team</a>
-          <a href="https://blog.ctcue.com/">Blog</a>
-          <a href="#contact">Contact</a>
-        </div>
 
-        <div class="mobile-nav-container">
-          <button class="lines-button arrow arrow-left" type="button" role="button" aria-label="Toggle Navigation">
-            <span class="lines"></span>
-          </button>
-        </div>
-      </div>
+                <div class="header-content">
+                    <h1>Find patients in an instant</h1>
 
-      <div id="mobile-nav">
-        <a href="#ctcue">CTcue</a>
-        <a href="#compliance">Compliance</a>
-        <a href="#early-adopters">Early adopters</a>
-        <a href="#team">Team - We're hiring!</a>
-        <a href="https://blog.ctcue.com/">Blog</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+                    <p>Searching through medical records for patients matching specific criteria is a laborious and time-consuming process.</p>
 
-    <div id="page-header">
-      <div class="container">
-        <div class="half pull-left">
-          <h1>Electronic Health Records are unstructured and primarily text based</h1>
+                    <p>Our intelligent <b>search engine</b> makes the information you need <b>instantly available</b></p>
 
-          <p class="lead">It is like a one-way street – clinicians enter data, but they cannot retrieve any information from these records.</p>
-
-          <p class="lead">CTcue makes EHR data useful and helps you instantly:</p>
-
-          <ul>
-            <li>Identify patient populations</li>
-            <li>Report on patient outcomes</li>
-          </ul>
-
-          <div class="cta-container">
-            <a href="#contact" class="button pull-left">Get access</a>
-            <a href="#ehr" class="link">Learn more</a>
-          </div>
-        </div>
-
-        <div class="half pull-right app-impressions">
-          <img src="img/screen-bg.png" class="slider-container" alt="Slideshow background">
-          <div>
-            <img src="img/app-impression-5.png" alt="CTcue term managament">
-          </div>
-          <div>
-            <img src="img/app-impression-6.png" alt="CTcue result page">
-          </div>
-          <div>
-            <img src="img/app-impression-7.png" alt="CTcue patient validation">
-          </div>
-          <div>
-            <img src="img/app-impression-8.png" alt="CTcue criteria breakdown">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="ehr">
-      <div class="container">
-        <h1>“The current EHR's are not designed to ensure data can be stored unambiguously, and as a result extracted..."</h1>
-
-        <small>Translated from “Registratie aan de bron” The Netherlands Federation of University Medical Centres (NFU April 2013)</small>
-
-        <p>Searching electronic health records remains a major hurdle. Since most valuable patient information is archived as text (clinical notes, transfer notes, multidisciplinary meeting notes, discharge letters, etc.) into the EHR, it is not possible to automatically search these criteria. Manual search through unstructured patient records is very time-consuming.</p>
-      </div>
-    </div>
-
-    <div id="ctcue">
-      <div class="container">
-        <div class="half pull-left">
-          <h1>CTcue</h1>
-
-          <p>CTcue is an intelligent information retrieval system for electronic health records. It's an intuitive interface that makes smart use of existing ontologies and automatically adds synonyms, allowing doctors and researchers to recall information from EHR with high precision. CTcue searches the entire EHR, including the text fields, which are interpreted by using the latest innovations in natural language processing and machine learning technologies. The results are instantly available and can be effectively reviewed in detail without having to consult the EHR.</p>
-        </div>
-
-        <div class="half pull-right">
-          <iframe width="100%" height="310" src="https://www.youtube.com/embed/PbJbrP9sUFM?modestbranding=1&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div id="compliance">
-      <div class="container">
-        <h1>Compliance</h1>
-
-        <p>Our application is based on “privacy by design”. Prior to entering patient data in our search engine, we pseudonymize all data, including documents, decursus, reports, etc. Our application offers an on site search on non-identifiable data, which allows different hospital employees to browse safely through the EHR data.<p>
-
-        <p>Did you know that by manually searching through the EHR, your employees might be violating the privacy act (Dutch Wbp)?</p>
-
-        <p>EY’s HvG specialized privacy attorneys validated our process, especially with respect to the 2016 legislation about the Bill on Data Breach Notifications (“Meldplicht datalekken”).</p>
-      </div>
-    </div>
-
-    <div id="early-adopters">
-      <div class="container">
-        <h1>Early adopters</h1>
-
-        <p>The proof of the pudding is in the eating. The following hospitals are the bravehearts who dared to start with us.</p>
-
-        <div class="row">
-          <div class="partner-container">
-            <a href="http://www.umcutrecht.nl/nl/" target="_blank">
-              <img src="img/partners/UMCU.png" alt="Universitair Medisch Centrum Utrecht">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <a href="http://www.spaarnegasthuis.nl/" target="_blank">
-              <img src="img/partners/Spaarne.png" alt="Spaarne Gasthuis">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <a href="http://www.isala.nl/" target="_blank">
-              <img src="img/partners/Isala.png" alt="Isala">
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <a href="http://www.martiniziekenhuis.nl/" target="_blank">
-              <img src="img/partners/Martini.png" alt="Martini Ziekenhuis">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <a href="https://www.amphia.nl/patienten-en-bezoekers" target="_blank">
-              <img src="img/partners/Amphia.png" alt="Amphia">
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <a href="https://www.lumc.nl/" target="_blank">
-              <img src="img/partners/LUMC.png" alt="Leids Universitair Medisch Centrum">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <a href="http://www.diakonessenhuis.nl/Pub" target="_blank">
-              <img src="img/partners/Diakonessenhuis.png" alt="Diakonessenhuis">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <a href="http://www.dz.nl/Paginas/Default.aspx" target="_blank">
-              <img src="img/partners/Deventer.png" alt="Deventer Ziekenhuis">
-            </a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="partner-container">
-            <a href="https://www.meandermc.nl/" target="_blank">
-              <img src="img/partners/Meander.png" alt="Meander Medisch Centrum">
-            </a>
-          </div>
-
-          <div class="partner-container">
-            <a href="https://www.mmc.nl/" target="_blank">
-              <img src="img/partners/Maxima.png" alt="Maxima Medisch Centrum">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="team">
-      <div class="container">
-        <div class="half pull-right">
-          <div class="center">
-            <div class="team-member">
-              <img src="img/team/roel-lakmaker.png" alt="Roel Lakmaker">
-
-              <h2>Roel Lakmaker</h2>
-
-              <p>Founder</p>
-              <p>CEO</p>
+                    <a href="https://www.youtube.com/watch?v=PbJbrP9sUFM" class="play-button" title="Play video" data-lity>
+                        <i class="icon-play-circle"></i>
+                    </a>
+                </div>
             </div>
+        </header>
 
-            <div class="team-member">
-              <img src="img/team/jochem-de-boer.png" alt="Jochem de Boer">
+        <section id="complex-data">
+            <div class="container">
+                <div class="half pull-left">
+                    <h1>Complex data made easy</h1>
 
-              <h2>Jochem de Boer</h2>
+                    <p>Retrieving information from EHR's is difficult, because healthcare data is complex. Clinicians enter their data in multiple places and in different formats. Valuable information is archived as text (e.g. reports or notes), which means a large percentage of valuable information is unavailable for analysis.</p>
 
-              <p>Co-founder</p>
-              <p>CTO</p>
+                    <p>We have developed a solution that organizes EHR data into logical categories and that uses text analytics to make the information in text accessible.</p>
+                </div>
+
+                <div class="half pull-right">
+                    <img src="img/complex-data-made-easy.png" alt="CTcue makes complex data easy">
+                </div>
             </div>
+        </section>
 
-            <div class="team-member">
-              <img src="img/team/fabien-tesselaar.png" alt="Fabien Tesselaar">
+        <section id="our-solutions">
+            <div class="container">
+                <div class="half pull-right">
+                    <h1>Our solutions</h1>
 
-              <h2>Fabien Tesselaar</h2>
+                    <h2>Identify patient populations</h2>
 
-              <p>Full Stack Developer</p>
+                    <p>With CTcue you don't have to be a data analyst to identify patient populations in the database.  Our easy-to-use interface allows you to conduct queries ranging from simple to highly complex.</p>
+
+                    <h2>Report on patient outcomes</h2>
+
+                    <p>Once a population has been identified and validated, CTcue can be used to collect data for the evaluation of patient outcomes. Define a set of parameters and get your results with a single click of the button.</p>
+                </div>
+
+                <div class="half pull-left">
+                    <img src="img/our-solutions.png" alt="Our solutions">
+                </div>
             </div>
+        </section>
 
-            <div class="team-member">
-              <img src="img/team/nick-visser.png" alt="Nick Visser">
+        <section id="save-time">
+            <div class="container">
+                <div class="half pull-left">
+                    <h1>Save time</h1>
 
-              <h2>Nick Visser</h2>
+                    <p>The current method of manually going through medical records in order to identify populations or to collect information is inefficient and expensive. Using CTcue saves you time,  because:</p>
 
-              <p>UX Designer</p>
+                    <ul>
+                        <li>You no longer have to go through records with little to no relevance</li>
+                        <li>Results are instantly available</li>
+                        <li>You can search, view and validate data within one application</li>
+                    </ul>
+                </div>
+
+                <div class="half pull-right">
+                    <img src="img/save-time.png" alt="CTcue helps u save time">
+                </div>
             </div>
+        </section>
 
-            <div class="team-member">
-              <img src="img/team/lydia-mennes.png" alt="Lydia Mennes">
+        <section id="privacy">
+            <div class="container">
+                <div class="half pull-right">
+                    <h1>Privacy</h1>
 
-              <h2>Lydia Mennes</h2>
+                    <p>Our application has been developed using a “privacy by design” approach, which means that privacy is our default setting. Before patient data enters our database on the hospital server it is stripped of all content that can be linked back to the patient.</p>
 
-              <p>AI Specialist</p>
+                    <p>Specialized privacy attorneys from EY have validated our process, paying special attention to the 2016 legislation Bill on Data Breach Notifications (“Meldplicht datalekken”).</p>
+                </div>
+
+                <div class="half pull-left">
+                    <img src="img/privacy.png" alt="Privacy by design">
+                </div>
             </div>
+        </section>
 
-            <div class="team-member">
-              <img src="img/team/frederiek-pennink.png" alt="Frederiek Pennink">
+        <section id="early-adopters">
+            <div class="container">
+                <h1>Early Adopters</h1>
 
-              <h2>Frederiek Pennink</h2>
+                <p>The proof of the pudding is in the eating. The following hospitals are the bravehearts who dared to start with us.</p>
 
-              <p>Medical Informatics</p>
+                <div class="row">
+                  <div class="early-adopter-container">
+                    <a href="http://www.umcutrecht.nl/nl/" target="_blank">
+                      <img src="img/early-adopters/umcu.png" alt="Universitair Medisch Centrum Utrecht">
+                    </a>
+                  </div>
+
+                  <div class="early-adopter-container">
+                    <a href="http://www.spaarnegasthuis.nl/" target="_blank">
+                      <img src="img/early-adopters/spaarne-gasthuis.png" alt="Spaarne Gasthuis">
+                    </a>
+                  </div>
+
+                  <div class="early-adopter-container">
+                    <a href="http://www.isala.nl/" target="_blank">
+                      <img src="img/early-adopters/isala.png" alt="Isala">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="early-adopter-container">
+                    <a href="http://www.martiniziekenhuis.nl/" target="_blank">
+                      <img src="img/early-adopters/martini.png" alt="Martini Ziekenhuis">
+                    </a>
+                  </div>
+
+                  <div class="early-adopter-container">
+                    <a href="https://www.amphia.nl/patienten-en-bezoekers" target="_blank">
+                      <img src="img/early-adopters/amphia.png" alt="Amphia">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="early-adopter-container">
+                    <a href="https://www.lumc.nl/" target="_blank">
+                      <img src="img/early-adopters/lumc.png" alt="Leids Universitair Medisch Centrum">
+                    </a>
+                  </div>
+
+                  <div class="early-adopter-container">
+                    <a href="http://www.diakonessenhuis.nl/Pub" target="_blank">
+                      <img src="img/early-adopters/diakonessenhuis.png" alt="Diakonessenhuis">
+                    </a>
+                  </div>
+
+                  <div class="early-adopter-container">
+                    <a href="http://www.dz.nl/Paginas/Default.aspx" target="_blank">
+                      <img src="img/early-adopters/deventer-ziekenhuis.png" alt="Deventer Ziekenhuis">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="early-adopter-container">
+                    <a href="https://www.meandermc.nl/" target="_blank">
+                      <img src="img/early-adopters/meander-medisch-centrum.png" alt="Meander Medisch Centrum">
+                    </a>
+                  </div>
+
+                  <div class="early-adopter-container">
+                    <a href="https://www.mmc.nl/" target="_blank">
+                      <img src="img/early-adopters/maxima-medisch-centrum.png" alt="Maxima Medisch Centrum">
+                    </a>
+                  </div>
+                </div>
             </div>
+        </section>
 
-            <div class="team-member">
-              <img src="img/team/pepijn-kroes.png" alt="Pepijn Kroes">
+        <footer>
+            <div class="container">
+                <div class="newsletter-signup pull-right">
+                    <h1>JOIN OUR NEWSLETTER</h1>
+                    
+                    <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                        <form action="//ctcue.us3.list-manage.com/subscribe/post?u=76889a3c77f2628ff852d1884&amp;id=7004cd5625" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <input type="email" value="" name="EMAIL" placeholder="Email address" class="required email pull-left" id="mce-EMAIL">
+                            <!-- <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    -->
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_76889a3c77f2628ff852d1884_7004cd5625" tabindex="-1" value=""></div>
+                            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="ctcue-btn">Sign up</button>
+                        </form>
+                    </div>
 
-              <h2>Pepijn Kroes</h2>
+                    <div id="newsletter-signup-success">
+                        <p>Thanks for joining our mailing list!</p>
+                    </div>
 
-              <p>Full Stack Developer</p>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+
+                    <p>Don’t worry, we hate spam as much as you do!</p>
+                </div>
+
+                <div class="footer-links pull-left">
+                    <a href="/" class="logo">
+                        <div class="logo">
+                            <img src="img/ctcue-logo.png" alt="CTcue">
+                            <p>CTcue</p>
+                        </div>
+                    </a>
+
+                    <a href="https://twitter.com/ctcue" target="_blank">
+                        <i class="icon-twitter-box"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/ctcue" target="_blank">
+                        <i class="icon-linkedin-box"></i>
+                    </a>
+                </div>
             </div>
+        </footer>
 
-            <div class="team-member">
-              <img src="img/team/reinier-kop.png" alt="Tessa Jacobs">
+        <!--[if lt IE 9]>
+            <script src="js/jquery-1.11.3.min.js"></script>
+        <![endif]-->
 
-              <h2>Reinier Kop</h2>
+        <!--[if lte IE 9]>
+            <script src="js/placeholders.min.js"></script>
+        <![endif]-->
 
-              <p>AI Specialist</p>
-            </div>
+        <![if !IE]>
+            <script src="js/jquery-2.1.4.min.js"></script>
+        <![endif]>
 
-            <div class="team-member">
-              <img src="img/team/david-de-jong.png" alt="David de Jong">
-
-              <h2>David de Jong</h2>
-
-              <p>Medical Informatics</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="half pull-left vertical-align">
-          <div>
-            <h1>Meet the team</h1>
-
-            <p>Entrepreneurial, user centered, running towards fires, caring about health care. Just some of the ways we would describe our team. Combined we have years of experience in entrepreneurship, consulting, engineering and designing. Our drive to improve health care through technological innovations unites us.</p>
-
-            <div class="jobs">
-              <h3>We are hiring!</h3>
-
-              <p>Do you want to work for a startup that is innovating the healthcare industry?</p>
-              <p>Check out the jobs listed below.</p>
-
-              <ul class="job-listing">
-                <li>
-                  <a href="chief-technology-officer/">Chief technology officer (CTO)</a>
-                  <small>Saas experience</small>
-                </li>
-
-                <li>
-                  <a href="software-developer/">Software developer</a>
-                  <small>Full stack</small>
-                </li>
-
-                <li>
-                  <a href="etl-specialist/">ETL / Datawarehouse specialist (Dutch)</a>
-                  <small>Data modeling experience</small>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="contact">
-      <div class="container">
-        <h1>Find patients with CTcue for <b>free</b>!</h1>
-        <!-- <h1>The use of CTcue to find patients for studies is <b>free</b>.</h1> -->
-
-        <p>A license fee is applicable if CTcue is used for free search on all data, e.g finding quality indicators.</p> 
-
-        <p>If you want to participate in a free trial please let us know.</p>
-
-        <form method="post" action="" id="contactForm">
-          <div class="contact-field">
-            <label for="name">Name</label>
-            <input placeholder="Your name" type="text" name="name">
-          </div>
-          <div class="contact-field">
-            <label for="email">Email address</label>
-            <input placeholder="Your email address" type="text" name="email">
-          </div>
-          <div class="contact-field">
-            <label for="phone">Phone number</label>
-            <input placeholder="Your phone number" type="text" name="phone">
-          </div>
-          <div class="contact-field">
-            <label for="message">Message</label>
-            <textarea name="message" placeholder="Your message" rows="5"></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button class="button" type="submit" name="versturen" >Send</button>
-
-            <h4 class="success">Message succesfully sent. Thank you for getting in touch.</h4>
-          </div>
-        </form>
-
-        <a href="mailto:info@ctcue.com?subject=I%20would%20like%20to%20know%20more%20about%20CTcue" class="button get-in-touch">
-          Get in touch
-        </a>
-
-        <div class="full">
-          <div class="address">
-            <p>CTcue B.V.</p>
-            <p>Science Park 402 1098 XH</p>
-            <p>Amsterdam</p>
-            <p>info@ctcue.com</p>
-            <p>+31 (0) 85 600 1037</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--[if lt IE 9]>
-      <script src="js/jquery-1.11.3.min.js"></script>
-    <![endif]-->
-
-    <!--[if gte IE 9]>
-      <script src="js/jquery-2.1.4.min.js"></script>
-    <![endif]-->
-
-    <![if !IE]>
-      <script src="js/jquery-2.1.4.min.js"></script>
-    <![endif]>
-
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/retina.min.js"></script>
-    <script src="js/ctcue.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-48181408-1', 'ctcue.com');
-      ga('send', 'pageview');
-    </script>
-  </body>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/modal.min.js"></script>
+        <script src="js/ctcue.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-48181408-1', 'ctcue.com');
+            ga('send', 'pageview');
+        </script>
+    </body>
 </html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="ctcue" horiz-adv-x="1000" >
+<font-face font-family="ctcue" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="linkedin-box" unicode="&#xe800;" d="M792 725c46 0 83-37 83-83v-584c0-45-37-83-83-83h-584c-45 0-83 38-83 83v584c0 46 38 83 83 83h584m-21-646v221c0 75-61 136-136 136-35 0-77-22-97-54v46h-116v-349h116v206c0 32 26 58 58 58 32 0 59-26 59-58v-206h116m-484 414c38 0 70 32 70 70 0 39-32 71-70 71-39 0-71-32-71-71 0-38 32-70 71-70m58-414v349h-116v-349h116z" horiz-adv-x="1000" />
+
+<glyph glyph-name="play-circle" unicode="&#xe801;" d="M417 163v375l250-188m-167 417c-230 0-417-187-417-417 0-230 187-417 417-417 230 0 417 187 417 417 0 230-187 417-417 417z" horiz-adv-x="1000" />
+
+<glyph glyph-name="spinner" unicode="&#xe802;" d="M488-150c-223 0-418 139-488 344l195 63c42-124 159-207 293-207 169 0 307 134 307 300 0 166-138 300-307 300l-2 0 0 200 2 0c282 0 512-224 512-500 0-276-230-500-512-500z" horiz-adv-x="1000" />
+
+<glyph glyph-name="twitter-box" unicode="&#xe803;" d="M208 725h584c46 0 83-37 83-83v-584c0-45-37-83-83-83h-584c-45 0-83 38-83 83v584c0 46 38 83 83 83m530-264c20 17 43 37 54 59-17-9-38-14-60-17 21 15 38 35 46 61-21-11-43-21-71-26-64 77-219 14-192-103-108 7-175 56-230 117-31-51-4-128 33-149-19 1-33 7-47 13 2-64 37-95 87-111-15-3-32-4-48-2 15-44 48-72 103-78-38-32-107-54-163-45 48-30 103-55 178-51 184 8 307 140 310 332z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

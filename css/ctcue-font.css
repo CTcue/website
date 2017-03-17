@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'ctcue';
+  src: url('../fonts/ctcue.eot?84196825');
+  src: url('../fonts/ctcue.eot?84196825#iefix') format('embedded-opentype'), url('../fonts/ctcue.woff2?84196825') format('woff2'), url('../fonts/ctcue.woff?84196825') format('woff'), url('../fonts/ctcue.ttf?84196825') format('truetype'), url('../fonts/ctcue.svg?84196825#ctcue') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'ctcue';
+    src: url('../font/ctcue.svg?18857079#ctcue') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "ctcue";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-linkedin-box:before {
+  content: '\e800';
+}
+/* '' */
+.icon-play-circle:before {
+  content: '\e801';
+}
+/* '' */
+.icon-spinner:before {
+  content: '\e802';
+}
+/* '' */
+.icon-twitter-box:before {
+  content: '\e803';
+}
+/* '' */
