@@ -8,11 +8,14 @@
 			"type": "image\/png"
 		},
 		{
-			"src": "\/android-chrome-512x512.png",
+			"src": "\/img\/android-chrome-512x512.png",
 			"sizes": "512x512",
 			"type": "image\/png"
 		}
 	],
+	"background_color": "#ffffff",
 	"theme_color": "#5BBFE1",
-	"display": "standalone"
+	"orientation": "portrait",
+	"display"    : "standalone",
+	"start_url"  : "."
 }

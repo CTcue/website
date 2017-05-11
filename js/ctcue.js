@@ -10,7 +10,7 @@ $(document).ready(function() {
             });
 
             $(this).removeClass("close");
-        } 
+        }
         else {
             mobileNav.slideDown( "fast", function() {
                 // Animation complete.
@@ -32,10 +32,10 @@ $(document).ready(function() {
         $(".header-content").css({
             top: Math.min(567, scrollAmount * 0.5),
             opacity: "-=" + scrollSpeed/700
-        }); 
-        
+        });
+
         lastScrollTop = scrollAmount;
-     }); 
+     });
 
     // Form validation
     $("#contact-form").validate({
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
             message: "required"
         },
-        
+
         messages: {
             name: "Please enter your name",
             email: {
@@ -83,7 +83,7 @@ $(document).ready(function() {
                     if (data === true || data === "true") {
                         // Reset form
                         $("#contact-form").find("input[type=text], textarea").val("");
-                        
+
                         // Reset button styling
                         $("#contact-form .ctcue-btn").css("display","none");
                         $("#contact-form .ctcue-btn i").css("display","none");
@@ -120,6 +120,22 @@ $(document).ready(function() {
            // Hide form until refresh and show success message
            $("#mc_embed_signup").css("display", "none");
            $("#newsletter-signup-success").css("display", "block");
-        } 
+        }
     });
 });
+
+
+// Add service worker
+// * reference: https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/js/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        },
+        function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
