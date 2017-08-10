@@ -752,12 +752,12 @@ nav ul li:last-of-type {
   width: 100%;
   position: relative;
   margin: 0 auto 40px auto;
-  background-image: url('../img/map.png');
+  background-image: url('../img/map-406.png');
   background-position: center;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
   .content-page .contact-details {
-    background-image: url("../img/map@2x.png");
+    background-image: url("../img/map-406@2x.png");
     background-size: auto auto;
   }
 }
