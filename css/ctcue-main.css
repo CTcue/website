@@ -752,7 +752,6 @@ nav ul li:last-of-type {
   margin-bottom: 0;
 }
 .content-page .contact-details {
-  width: 100%;
   position: relative;
   margin: 0 auto 40px auto;
   background-image: url('../img/map-406.png');
