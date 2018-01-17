@@ -1019,6 +1019,16 @@ form .form-actions .contact-success {
   margin: 0 !important;
   display: none;
 }
+form .form-actions .contact-error {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  font-size: 1.8rem;
+  color: #EC5E67;
+  margin: 0 !important;
+  display: none;
+}
 @-webkit-keyframes spinner {
   from {
     -webkit-transform: rotate(0deg);

@@ -66,7 +66,8 @@ $(document).ready(function() {
               "message": $("textarea[name='message']").val()
             }
 
-            var url = "https://app.ctcue.com/api/contact";
+            //var url = "https://app.ctcue.com/api/contact";
+            var url = "http://localhost:3000/contact";
 
             // Disable button and show spinner
             $("#contact-form .ctcue-btn").attr("disabled", true);
@@ -102,6 +103,17 @@ $(document).ready(function() {
                            }, 5000);
                         });
                     }
+                },
+                error: function(data) {
+                    // Reset button styling
+                    $("#contact-form .ctcue-btn").css("display","none");
+                    $("#contact-form .ctcue-btn i").css("display","none");
+                    $("#contact-form .ctcue-btn").attr("disabled", false);
+                    $("#contact-form .ctcue-btn span").css("display","inline");
+                    $("#contact-form .ctcue-btn").addClass("no-transition");
+
+                    // Show error message and after timeout show button again
+                    $(".contact-error").slideDown( 300, function() {});
                 }
             });
 

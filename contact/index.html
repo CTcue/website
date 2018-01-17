@@ -66,6 +66,15 @@
                     <p>What can we do for you? If you have any questions don’t hesitate to get in touch. </p>
                 </div>
 
+                <noscript>
+                    <style type="text/css">
+                        #contact-form {display:none;}
+                    </style>
+                    <div class="noscriptmsg">
+                        <p>You don't have javascript enabled. If you have question you can call us on +31 (0)85 600 1037 or send an email to info@ctcue.com.</p>
+                    </div>
+                </noscript>
+
                 <form method="post" action="" id="contact-form">
                     <input placeholder="* Your name" type="text" name="name">
                     <input placeholder="* Your email address" type="text" name="email">
@@ -74,11 +83,13 @@
 
                     <div class="form-actions">
                         <button class="ctcue-btn" type="submit" name="versturen">
-                            <i class="icon-spinner"></i> 
+                            <i class="icon-spinner"></i>
                             <span>Send it</span>
                         </button>
 
                         <p class="contact-success">Message sent</p>
+
+                        <p class="contact-error">Sorry! We could not send your email. <br> Please email us at info@ctcue.com</p>
                     </div>
                 </form>
             </div>
