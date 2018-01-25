@@ -66,8 +66,7 @@ $(document).ready(function() {
               "message": $("textarea[name='message']").val()
             }
 
-            //var url = "https://app.ctcue.com/api/contact";
-            var url = "http://localhost:3000/contact";
+            var url = "https://app.ctcue.com/api/contact";
 
             // Disable button and show spinner
             $("#contact-form .ctcue-btn").attr("disabled", true);
