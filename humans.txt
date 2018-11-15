@@ -63,14 +63,20 @@
 /* TEAM */
 
   Roel Lakmaker
-  Fabiën Tesselaar
+  Fabien Tesselaar
   Jochem de Boer
   Nick Visser
   Lydia Mennes
-  Pepijn Kroes
   Frederiek Pennink
   Reinier Kop
   David de Jong
+  Bernd van der Veen
+  Sjoerd Groustra
+  Marlie Barends
+  Miguel Correia
+  Shane Husson
+  Ruben s'Jacob
+  Jessica Maarleveld
 
 
 /* SECURITY */
@@ -80,7 +86,7 @@
 
 /* SITE */
 
-  Last update: 2016/04/15
+  Last update: 2018/11/15
   Language: English
   Doctype: HTML5
   IDE: Sublime Text
