@@ -704,6 +704,7 @@ nav ul li:last-of-type {
 .content-page .content .container {
   background: #fff;
   border: 1px solid #d3d3db;
+  padding: 24px 0;
 }
 .content-page .content p,
 .content-page .content h2,
