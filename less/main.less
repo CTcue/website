@@ -111,7 +111,6 @@ h4 { font-size: 2.4rem; line-height: 1.35; }
 h5 { font-size: 1.8rem; line-height: 1.5; }
 h6 { font-size: 1.5rem; line-height: 1.6; }
 
-
 p {
   font-size: 1.8rem;
   line-height: 3.6rem;
@@ -633,7 +632,6 @@ header {
     }
 
     b {
-      color: @ctcue-lightblue;
       font-weight: 500;
     }
   }
@@ -701,6 +699,7 @@ nav {
 #complex-data {
   position: relative;
   z-index: 3;
+  margin-top: 16px;
 }
 
 .content-page {
@@ -751,7 +750,12 @@ nav {
       font-size: 2rem;
       text-align: center;
       color: @ctcue-darkblue;
-      margin: 0 auto 40px auto;
+
+      margin: 50px auto;
+    }
+
+    .center-text {
+        text-align: center;
     }
 
     ul {
@@ -767,11 +771,24 @@ nav {
     }
 
     .lead {
-      text-align: center;
-      margin: 40px 0 40px 0;
+      margin: 40px 0 64px 0;
 
       h1 {
         margin: 0 0 20px 0;
+        text-align: center;
+      }
+
+      .introduction {
+        font-size: 1.6rem;
+        line-height: 175%;
+        text-align: justify;
+      }
+
+      .headline {
+        margin-top: 32px;
+        text-align: center;
+        font-size: 2rem;
+        color: @ctcue-lightblue;
       }
     }
   }
@@ -876,7 +893,7 @@ nav {
 
 .job {
   max-width: 780px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 64px auto;
 
   h2 {
     font-size: 3.0rem;

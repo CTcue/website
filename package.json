@@ -1,0 +1,15 @@
+{
+  "name": "ctcue-website",
+  "version": "1.0.0",
+  "description": "CTcue | Find patients in an instant",
+  "license": "Proprietary",
+  "private": true,
+  "devDependencies": {
+    "autoless": "^0.1.7",
+    "csso-cli": "^2.0.2"
+  },
+  "scripts": {
+    "css": "autoless ./less ./css",
+    "build":  "yarn run css --no-watch && csso ./css/ctcue-main.css --output ./css/ctcue-main.min.css"
+  }
+}
