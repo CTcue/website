@@ -726,6 +726,9 @@ nav ul li:last-of-type {
   color: #aaa;
   margin: 0 auto 40px auto;
 }
+.content-page .content small.privacy-notice {
+  margin: 20px 0 0 0;
+}
 .content-page .content .cta {
   font-size: 2rem;
   text-align: center;
