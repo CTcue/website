@@ -5,11 +5,9 @@
   "license": "Proprietary",
   "private": true,
   "devDependencies": {
-    "csso-cli": "^2.0.2",
     "less": "^3.9.0"
   },
   "scripts": {
-    "css": "lessc --js ./less/ctcue-main.less ./css/ctcue-main.css",
-    "build": "yarn run css && csso ./css/ctcue-main.css --output ./css/ctcue-main.min.css"
+    "build": "lessc --js ./less/ctcue-main.less ./css/ctcue-main.min.css"
   }
 }
