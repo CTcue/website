@@ -72,11 +72,14 @@
   David de Jong
   Bernd van der Veen
   Sjoerd Groustra
-  Miguel Correia
   Shane Husson
   Ruben s'Jacob
   Jessica Maarleveld
-
+  Joran Rood
+  Arianne van Nieuwenhuijsen
+  Leon van Heesch
+  Douwe Oosterhout
+  Tom van den Broek
 
 /* SECURITY */
 
@@ -85,7 +88,7 @@
 
 /* SITE */
 
-  Last update: 2019/01/05
+  Last update: 2020/09/18
   Language: English
   Doctype: HTML5
   IDE: VS Code
